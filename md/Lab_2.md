@@ -15,15 +15,6 @@ are also used to communicate results to a
 variety of audiences, from other data scientists to customers.
 
 
-**Note:**
-
-EDA is the general name for the process of using numerical summaries,
-plots, and aggregating methods to explore a dataset to familiarize
-yourself with its contents. It will almost certainly involve you
-examining the distribution of variables in the dataset, looking at
-missingness, deciding whether there are any outliers or errors, and
-generally getting a feel for what is contained in your data.
-
 
 In this lab, you\'ll learn about base plots, ggplot2, and will be
 briefly introduced to more advanced plotting with the applications Shiny
@@ -38,40 +29,15 @@ By the end of this lab, you will be able to:
 -   Explain different tools for interactive plotting in R
 
 
+#### Lab Environment
 
-Creating Base Plots
--------------------------------------
+All packages have been installed. There is no requirement for any setup.
 
-
-
-R can plot data without installing any additional packages. This is
-commonly referred to as **base plotting**. It is called
-base plotting because, like functions that
-come pre-installed with R in the base
-package, discussed in Lab 1, these plots are built into R. The
-graphics package comes with a download of R and enables you to plot data
-without installing any other packages.
+All datasets and examples are present in `~/Desktop/R-Programming/lesson2/` folder. 
 
 
-**Note:**
 
-To see details on the graphics package, you can search for [*R graphics
-package*] in a search engine of your choice or navigate to
-the following URL:
-<https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/00Index.html>.
-
-
-Base plots are often not used outside of work done for data cleaning and
-EDA. Many data scientists use other more [*aesthetically pleasing
-plots*], such as those generated using ggplot2 or Plotly, for
-any plots or graphs that a customer may see. It is important to know how
-to use `plot()` and create base plots, however, so let\'s dive
-in!
-
-
-### The plot() Function
-
-
+#### The plot() Function
 
 
 ![](./images/3bff829d-bfe1-4035-beae-78889993464e.png)
@@ -86,39 +52,6 @@ can, of course, add a second variable, [*y*], plus an
 assortment of options to customize the plot, but [*x*] is the
 only input required for the function to run successfully.
 
-For anything beyond the basic [*x*] and [*y*]
-arguments to the function, you\'ll need to get very familiar with using
-`?plot` or `help(plot)`. The documentation suggests
-options, such as those for titles and axis labels, and also points you
-to the documentation for other graphical parameters, found under the
-`par()` function in R. The options provided by the function
-are far more detailed and allow you to change the colors, fonts,
-positions of axis labels, and much more for your base plots.
-
-Beyond knowing the basics about how to use `plot()`, you do
-not need to memorize all of the function\'s possible options.
-Realistically, you do not need to memorize all of the options for any
-function in R. Most of the time when you are doing your work, you will
-have access to documentation and help. Learning R is about learning both
-how to use functions and also how to look for help when you need it.
-
-
-**Note:**
-
-All of the preceding options take you directly to the help
-documentation, also found online at the following URL:
-<https://stat.ethz.ch/R-manual/R-devel/library/graphics/html/plot.html>.
-
-
-When you start out to write plots in base R, you may be interested to
-know that there are many other inputs besides just the data you want to
-plot. You can access the R help documentation for the `plot()`
-function in the following ways:
-
-
--   `?plot`
--   `help("plot")`
--   `help(plot)`
 
 
 
@@ -376,34 +309,6 @@ looking at it before you run this line.
 #### Titles and Axis Labels
 
 
-
-If we want to add a title and custom axis
-labels to a base plot, it is simply a matter
-of adding extra inputs to `plot()`. If you examine the
-documentation for `plot()` using `?plot` or
-`help(plot)`, you\'ll see that plot can take a number of
-inputs that will do the following:
-
-
--   `main`, for plot titles
--   `sub`, for subtitles
-    
-    -   These will be smaller than the title
-    -   Subtitles are printed at the bottom of the plot, beneath the
-        x-axis label
-    
--   `xlab`, to change the x-axis label
-    
-    -   By default, the x-axis label will be the name of the variable
-        you input as it is named in the dataset. Use xlab to change it.
-    
--   `ylab`, to change the y-axis label
-    
-    -   The y-axis defaults are the same as for the x-axis, and ylab
-        works just as xlab does.
-    
-
-
 Let\'s return to our `mtcars` scatterplot, add a title and
 subtitle, and also change the axis labels with the following code:
 
@@ -629,14 +534,6 @@ package in R. It can be installed on its own or comes as part of the
 `Tidyverse` set of packages.
 
 
-**Note:**
-
-Developed by Hadley Wickham and Winston Chang, ggplot2 implements the
-[*Grammar of Graphics*], a pre-existing idea in statistical
-computing, for R. As we begin making plots with ggplot2, you may
-recognize the aesthetic of the plots, as ggplots are widely used in
-publications, data journalism, and blog posts.
-
 
 When you\'re using ggplot2, both as you\'re learning how to use it and
 even when you\'re more seasoned, the official RStudio ggplot2 cheat
@@ -651,8 +548,10 @@ build a histogram using `geom_hist()`).
 **Note:**
 
 The ggplot2 cheat sheet can be found at the following URL:
-<https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf>. [RStudio
-has also made many different cheat sheets available for common R
+<https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf>. 
+
+
+RStudio has also made many different cheat sheets available for common R
 packages. They can be found on their official website at the following
 URL:https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf
 
@@ -2017,126 +1916,10 @@ ggplot(diamonds, aes(carat, price, col = cut)) + geom_point(alpha = 0.4) + theme
 ```
 
 
-The output of the preceding
-code will be as follows:
+The output of the preceding code will be as follows:
 
 
 ![](./images/e87f176a-4f3c-45a4-8d47-4ef84fc4817c.png)
-
-
-
-Interactive Plots
------------------------------------
-
-
-
-Learning to build interactive plots is not
-within the scope of this course, but it is likely that you will see (and
-admire!) them on your data science with R journey, so a few examples are
-laid out in this topic.
-
-
-### Plotly
-
-
-
-Plotly is an R package designed to allow you
-to create interactive plots online. It
-integrates with ggplot2, which we also learned in this lab, and can
-be implemented in a number of programming languages as well, including
-Scala, Python, and Node.js.
-
-We can view a few of these demos on the Plotly website, such
-as `Dashboards` **under** `Plotly Fundamentals`. We can see a full
-dashboard of Plotly charts load, including a plot of the
-`diamonds` dataset in the upper left, a bar chart next to it,
-a map of the United States, a heat map, a histogram, and more. Navigate
-to the Plotly R site and click on the **`map demo`**:
-
-
-![](./images/c82fe9bf-4279-451f-8084-310b240d005d.png)
-
-
-What makes Plotly special is that if we hover over any given part of
-these examples, we can see values. For example, if we hover over Texas
-on the map example, we see all of its values in the associated dataset.
-
-Plotly allows for a variety of different charts, such as scatter and
-line plots, pie charts, box plots, contour plots, heat maps, and beyond.
-The website gives examples of many, and you can even extend Plotly
-charts to be interactive or animated.
-
-
-**Note:**
-
-Plotly has an entirely online guidebook located at <https://plot.ly/r/>,
-which demonstrates online and offline uses of Plotly in R.
-
-
-
-
-### Shiny
-
-
-
-Shiny is a product built by RStudio that
-allows you to build interactive web apps
-straight out of RStudio. They can be used on the web, embedded into R
-Markdown documents, and like Plotly charts, can be extended with CSS,
-HTML, and JavaScript.
-
-Shiny allows you to build a number of different kinds of interactive
-graphics. The **Telephones by Region** example is one that
-has been built and includes code for you to learn from. If you use the
-drop-down box to change to different regions, you can see that the
-number of telephones in the graph changes. Because you can see the code,
-you can see that for a Shiny app to run, you need two code files: one
-`server.R` script, and one `ui.R` script, short for
-user interface, which defines what the graphs in the app will look like.
-
-
-**Note:**
-
-Navigate to the RStudio Shiny gallery and see the word cloud example
-available at the following URL: <https://shiny.rstudio.com/gallery/>.
-
-
-The **word cloud** example shows a
-completely different type of Shiny app, which includes a chart we
-haven\'t even considered yet. In a word cloud, the size of the word
-corresponds to how many times it appears in a longer text, with longer
-words appearing more frequently. There are multiple options we can
-select in this app, including which Shakespeare text, a minimum
-frequency, and a maximum number of words. If we adjust all three, we can
-see that the word cloud changes---we have different words that are
-different sizes and colors.
-
-While it is not within the scope of this course to build Plotly charts or
-a Shiny app, once you have the hang of ggplot2 and graphing in R, they
-are a very fun way to extend your knowledge.
-
-
-
-### Exploring Shiny and Plotly
-
-
-
-To explore the Shiny and Plotly tools, in your web
-browser, navigate to the following URLs:
-
-
--   <https://shiny.rstudio.com/gallery/>
--   <https://plot.ly/r/>
-
-
-Spend some time exploring both sites and find
-both a Plotly graph and Shiny app that appeal
-to you.
-
-Can you think of examples of Plotly graphs or
-Shiny apps you could build in your work?
-Write your ideas down now so you can learn how to implement them later,
-after you\'ve finished this course!
 
 
 
@@ -2151,13 +1934,6 @@ things where, most of the time, there are always going to be different
 types of graphs you haven\'t heard of yet and options you haven\'t yet
 selected, so it\'s important to know where to look for assistance and
 how to keep learning.
-
-We have only covered the basics to get you off the ground in ggplot2 in
-this course, so you\'ll definitely need to use Stack Overflow and the
-ggplot2 official documentation on the `Tidyverse` website to
-experiment with different graphs and aesthetics. You should look into
-how to use scales, how to have ggplot2 calculate statistics for you, and
-the many other diﬀerent types of plots available.
 
 Let\'s press forward on to the next topic, where we\'ll begin to look at
 some data more closely, doing some cleaning and data management

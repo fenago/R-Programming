@@ -26,23 +26,16 @@ By the end of this lab, you will be able to:
 -   Merge and join different datasets using base R and the dplyr methods
 
 
+#### Lab Environment
+
+All packages have been installed. There is no requirement for any setup.
+
+All datasets and examples are present in `~/Desktop/R-Programming/lesson3/` folder. 
+
+
 
 Factor Variables
 ----------------------------------
-
-
-
-We discussed variable types in Lab 1 but did not include factor variables
-because they\'re a special type of variable in R that you must often
-create yourself. In this section, we\'ll learn what a factor variable
-is, when to use a factor variable, how to
-create one, what the levels of a factor are, and how to change the
-levels.
-
-A factor variable in R is an explicitly declared categorical variable,
-or one that defines different categories or levels. Some common examples
-of factor variables include a variable describing sex, month, or one
-designating low/medium/high.
 
 Recall our discussion of variable classes and types from Lab 1. A factor variable will always be of
 class `factor`, but can be any type: `character`,
@@ -97,39 +90,10 @@ of each observation at unique levels of the factor variable.
 Since we\'ve discussed what a factor variable is, let\'s go through some
 other questions you may have about factors.
 
-**When Should You Use a Factor Variable?**
 
-The cylinder variable in `mtcars` can be turned into a factor
-variable because there are only three values the cylinder variable can
-take. These are four, six, and eight cylinders; this
-means that this is a
-[*categorical*] variable, another word for a factor variable.
-The cars in this dataset are either four-, six-, or eight-cylinder cars.
-The `mpg` variable in the same dataset wouldn\'t be a good
-candidate for a factor variable because it isn\'t categorical and it is
-the numeric value of the miles per gallon of each car.
-
-Any time you have a character variable that has a set number of
-categories for that variable, for example, [*Months*] = [*12
-months*], [*Sex*] = [*2 sexes*], [*3
-levels*]: [*Low*], [*Medium*], and
-[*High*], and so on, you can (and should!) transform that
-variable into a factor variable in R.
 
 **Why Should You Use a Factor Variable?**
 
-Besides the fact that it\'s helpful to
-explicitly declare your categorical variables so that these are obvious
-when you view a summary of a dataset (using `str()` or
-`dplyr::glimpse()`), there are two critical reasons to use
-factor variables.
-
-Firstly, functions such as `lm()` and `glm()` (among
-others) that build statistical models in R treat a categorical variable
-coded with numbers (for example, Months as 1, 2, 3, ...) as a continuous
-variable if you don\'t explicitly declare the variable to be a factor
-variable. This will produce erroneous model estimates and lead to
-incorrect conclusions.
 
 For example, let\'s build a linear regression
 model to examine the relationship between the number of cylinders
@@ -221,6 +185,7 @@ Here is the boxplot we are looking for:
 
 Now that we know when and why to use a factor
 variable, let\'s learn how to create one.
+
 
 **How Should You Create a Factor Variable?**
 
@@ -720,95 +685,8 @@ installed on your machine.
 
 
 
-Summarizing Data
-----------------------------------
 
-
-
-A huge component of data management and
-cleaning is summarizing your data. It\'s hard to know what\'s really
-inside data just by looking at it. If you\'re a frequent user of
-Microsoft Excel, you might be familiar with creating pivot tables to
-summarize data and get a feel for what\'s inside your dataset. We won\'t
-use pivot tables with R in this course, but it is possible.
-
-There are various R functions and R packages that allow for the creation
-of different types of tables to examine data. You can also use the
-`apply` family of functions to generate summaries.
-
-
-### Data Summarization Tables
-
-
-
-If you\'re familiar with Microsoft Excel, you may have some experience
-building pivot tables. It\'s possible to create them in R using the `rpivotTable` package, as
-shown in the following screenshot:
-
-
-![](./images/e2c6af3d-fb45-48a8-9058-b246cac7e96a.png)
-
-
-If you install it along with the `htmlwidgets` package, you
-can create pivot tables with multiple options and look at stats. It\'s
-interesting, but you\'ll also need to know how to manipulate data
-yourself. The rest of this section will focus on building the various
-kinds of summaries using tools other than `rpivotTable`.
-
-What kind of data summarization you\'ll need to use will strongly depend
-on the goals of your data project. Building a logistic regression model
-using the classic Titanic passengers\' dataset to predict survival?
-You\'re going to need to look at sex, passenger class, and age, both on
-their own and some combination of the three. (We\'ll clean this dataset
-later in this lab.) Writing a report summarizing yearly sales data
-for the leadership at your company? Look for trends by month, quarter,
-customer, and product type. You\'ll need to ask yourself questions about
-what kinds of data summarizations (and visualizations!) are appropriate
-and needed. You may not think of them all at once. In fact, EDA is often
-an iterative process that will happen continuously across data cleaning,
-modeling, and analysis, and report writing stages of data science.
-
-
-#### Tables in R
-
-
-
-Tables in R are very helpful when you want to create a grid of counts of one or two categorical variables. They
-can be saved as an object for export or in combination with other
-summary tables.
-
-We\'ve used the `iris` dataset numerous times by now, and have
-observed that there are 50 of each species of flower in the data. To
-create a table to verify it, use the `table()` function. If
-you input a variable of interest to `table()`, R will return a
-table of the values of the input variable with a count of how many
-observations have that particular value.
-
-You can also create two-way tables, though we\'ll need to use a
-different dataset, as there\'s only one categorical variable in iris. To
-create a two-way variable, input two different variables from a dataset
-into `table()`. The first variable input will be shown as the
-table\'s rows, and the second variable input will be shown as the
-table\'s columns.
-
-However, there are a few disadvantages of the `table()`
-function. They are as follows:
-
-
--   It doesn\'t show missing variables unless they\'re explicitly
-    declared as a level of the variable in some way.
-
--   Anything above what a two-way table, that is, a table with two
-    variables, prints is hard to read. You will see an example of this
-    in the following example. 
-
--   It prints a long, uninformative table for a continuous variable
-    should you enter one into the function. It won\'t be helpful to know
-    how many values there are of a variable when it\'s continuous.
-
-
-
-##### Creating Different Tables Using the table() Function
+#### Creating Different Tables Using the table() Function
 
 
 
@@ -879,8 +757,7 @@ execute the code mentioned in [*Step 3*]:
 ![](./images/7d761134-1b54-4473-bdc9-8442dcfba004.png)
 
 
-The following is the output we get as we execute the code mentioned in
-[*Step 4*]:
+The following is the output we get as we execute the code mentioned in *Step 4*:
 
 
 ![](./images/b8f39af6-7c39-4865-b7a1-3a9a6748747e.png)
@@ -1034,27 +911,6 @@ The counts of the diamonds\' clarity by color are as follows:
 ### Summarizing Data with the Apply Family
 
 
-
-The apply family of functions is an incredibly powerful set of R
-functions that you should learn early on in
-your R programming journey. It\'ll be very helpful to be skilled in
-summarizing across many variables at once. This is where the apply
-family of functions comes in.
-
-The apply family is a set of functions that allows you to perform
-aggregating (using `mean()`, `sum()`, and other
-summary functions), transforming or sub-setting, and other functions
-(including custom functions!) across a large range of your dataset. The
-family of functions includes basic functions such as
-`apply()`, but also `lapply()`,
-`sapply()`, `vapply()`, `mapply()`,
-`rapply()`, and `tapply()`. Mostly, the difference
-between these different functions is that they return different things
-when they are called. For example, `lapply()` returns a list
-and `vapply()` returns a vector. There are a few other
-differences, but for the purpose of this lab, they won\'t be as
-important.
-
 Let\'s look at a few examples of how to use the apply family to
 summarize data. One example of the use of the `apply()`
 function would be the following:
@@ -1111,23 +967,6 @@ The output is as follows:
 ![](./images/b7b14265-e677-4b38-b324-5f5c94ab5bee.png)
 
 
-Here, the first two inputs to `apply()` are the same, but we
-have to write a custom function that takes in a `dataset(x)`
-and then computes the median and variance of the columns (because we
-input 2 in the second input to `apply()`) of the dataset.
-
-In the preceding output, the first row is the median of columns and the
-second is the variance. Not that for the custom function that computes
-median and variance to work, `median()` and `var()`
-have to be put inside a vector, which is created with the
-`c()` function.
-
-The `iris` dataset works very well to demonstrate the power of
-apply, as it contains only one categorical variable
-(`Species`) and the rest are continuous. We can find the mean,
-median, standard deviation, variance, or any numerical summary measure
-of all four length and width variables quickly with `apply()`.
-Let\'s try a few functions out in the next section.
 
 
 #### Using the apply() Function to Create Numeric Data Summaries
@@ -1234,48 +1073,6 @@ package should be installed.
 
 Splitting, Combining, Merging, and Joining Datasets
 ---------------------------------------------------------------------
-
-
-
-Any time you\'re working with data, which R is designed for, you\'re
-likely to encounter a number of situations where you\'ll need to either split up datasets, combine them, or
-merge/join them. Occasionally in your work, you may be handed data that
-is already in one dataset that you\'ll use throughout the analysis. However, it\'s more
-likely that you\'ll need to do a decent
-amount of splitting, combining, and merging/joining over the course of
-any given project.
-
-
-### Splitting and Combining Data and Datasets
-
-
-
-Splitting and unsplitting data is provided
-for in the base package of R with functions
-named `split()` and `unsplit()`. Combining data is
-usually done using the base functions
-`rbind()` and `cbind()`, which combine by row and
-column, respectively. Let\'s look at how to
-split, unsplit, and combine data in R.
-
-
-#### Splitting and Unsplitting Data with Base R and the dplyr Methods
-
-
-
-Splitting data can be accomplished using
-base R with the `split()` function.
-Its simplest use would be to input a dataset you\'d like to be split
-followed by a factor variable to split that dataset
-`by.unsplit()` works in a very similar fashion.
-
-`dplyr` also has functions that
-facilitate splitting data, which can be rejoined with combination
-methods we will cover in more detail very
-soon in this section. Often, these alternative methods will require less
-code.
-
-Let\'s explore both of these possibilities in the next section.
 
 
 
@@ -1713,30 +1510,18 @@ the code mentioned in [*Step 2*]:
 ![](./images/f655cd4f-8024-4f59-a7c6-6781681bd32a.png)
 
 
-The following is the output we get upon executing the code mentioned in
-[*Step 4*]:
+The following is the output we get upon executing the code mentioned in *Step 4*:
 
 
 ![](./images/694a51e1-559c-4b83-b3c5-3847a5171e8c.png)
 
 
-The following is the output we get upon executing the code mentioned in
-[*Step 6*]:
+The following is the output we get upon executing the code mentioned in *Step 6*:
 
 
 ![](./images/d6ac12b6-8b85-4bff-a0e5-6eef012d7ed5.png)
 
 
-Text cleaning is a big part of data cleaning,
-and will often require even more work than string splitting. You should
-check out the many functions included in the `stringr` package
-in any instance in the future where you\'re asked to work with text data
-in R.
-
-Combining strings is so straightforward; you can use base R methods to
-do so: use `paste()` to combine strings with a space in
-between the items you\'re combining, and `paste0()` to combine
-strings without a space. 
 
 
 
@@ -1803,8 +1588,7 @@ executing the code mentioned in [*Step 3*]:
 ![](./images/f3101ca1-62ac-4de0-b363-ed174c6750d1.png)
 
 
-The following is the output we get upon executing the code mentioned in
-[*Step 4*]:
+The following is the output we get upon executing the code mentioned in *Step 4*:
 
 
 ![](./images/d7e2244f-bbfa-4bc2-bebd-826dfa7c63bc.png)
@@ -1863,41 +1647,8 @@ Make sure you have R and RStudio installed on your machine.
 
 
 
-### Merging and Joining Data
 
-
-
-Many of the examples we see, both in this course and in many spaces where
-we learn to program in R or other languages, include complete datasets.
-The datasets we\'re using for much of this
-course are built-in and don\'t need to be merged with any other data. This
-is very rarely the case when you\'re actually doing data analysis. One
-crucial skill in data science especially is the ability to merge and
-join data, by a common key, from occasionally disparate sources. Base R
-allows for merging datasets with the
-`merge` function. Inside of it, you can specify the type of
-merge, which you might be familiar with if you\'ve ever used SQL to
-merge data. Joins are implemented in R inside the `dplyr`
-package. Say we have two datasets, `x` and `y`, and
-we want to join them using a variable `ID`, which perhaps
-identifies unique subjects in datasets `x` and `y`.
-Here\'s a summary of the types of merges and joins you\'ll use most of
-the time:
-
-![](./images/3.PNG)
-
-Let\'s look at how to perform merges and joins in R with an example.
-Let\'s return to the students dataset that we used in [*Lab
-1*], [*Introduction to R*], with the addition of
-an `ID` variable, a unique number assigned to each individual
-student. We\'ll also use a second dataset,
-`students2`, which gives more information about these
-students, including their gender, grade, and what sport they play. These
-two datasets have an `ID` variable
-in common, so we\'ll be able to merge and join on this variable.
-
-
-#### Demonstrating Merges and Joins in R
+### Demonstrating Merges and Joins in R
 
 
 
@@ -2053,22 +1804,6 @@ The following is the `students2` dataset as an output:
 ```
 
 
-One commonality you may have noticed is that for both
-`merge()` and the `*_joins()` functions from
-`dplyr` is that you enter a by variable to merge or join on.
-If you don\'t, in general, both types of functions will be able to
-detect what to join on as long as the variables are named the same
-thing. If you\'re in a situation where the variables are not named the same thing (which is common!), you\'ll have
-some trouble. In that case, where the by variables are named two
-different things, you will have to specify the two different names so
-that the functions know what to do, as you did in the example.
-
-It\'s not uncommon in data science to have to
-merge or join multiple datasets when you work with data in R. While
-you\'re learning, you may encounter a lot of datasets that are already
-joined, but the reality of data work is that you often have to take data
-from disparate sources and combine it.
-
 
 
 
@@ -2143,14 +1878,8 @@ data and perform data analysis projects. You will probably run across
 more questions about your data if you use it to build statistical
 models.
 
-This course was hopefully only the beginning of your R pro. It has taken
+This course has taken
 you through variable types, basic flow control, data import and export,
 data visualization with base plots and ggplot2, summarizing and
 aggregating data, plus joins and merging to help you build a foundation
-for how to use R to work with data. However, the Comprehensive R Archive
-Network, or CRAN, the largest repository of R packages available for
-download, contains more than 10,000 R packages built by R users to
-accomplish many different tasks with R. There are even more packages
-available on GitHub, Bioconductor, and other places online. Chances are,
-if you\'re looking to do it in R, someone has built a package that will
-at least get you started.
+for how to use R to work with data.

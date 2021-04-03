@@ -7,14 +7,11 @@ Lab 1. Introduction to R
 
 
 
-One tool that statisticians---and now data scientists as well---often
+One tool that statisticians --- and now data scientists as well often
 use for data cleaning, analysis, and reporting is the R programming
 language. 
 
-In this lab, we\'ll begin by looking at the basics of using R as a
-programming language and as a statistical analysis tool, and we\'ll also
-install a few useful R packages that we will continue to use throughout
-the course. 
+
 
 By the end of this lab, you will be able to:
 
@@ -27,46 +24,15 @@ By the end of this lab, you will be able to:
 
 
 
-Using R and RStudio, and Installing Useful Packages
---------------------------------------------------------------------
+#### Lab Environment
 
+All packages have been installed. There is no requirement for any setup.
 
-
-R is a programming language intended for
-use for statistical analysis. Additionally,
-it can be utilized in an object-oriented or functional way.
-Specifically, it is an implementation of S, an interactive statistical
-programming language. R was initially
-released in August 1993. It is maintained today by the R Development
-Core Team.
-
-RStudio is an incredibly useful **Integrated Development Environment** (**IDE**) for writing and using R.
-Many data scientists use RStudio for writing
-R, as it provides a console window, a code editor, tools to help create
-plots and graphics, and can even be integrated with GitHub to support
-version control.
-
-While R does share some functionality with Microsoft Excel, it allows
-you to have more control over your data, and
-you can add on a variety of packages that
-allow statistical functionality out of the box---you won\'t have to
-build a formula to conduct a survival analysis; you can
-just install the survival package and use
-that!
-
-
-**Note:**
-
-Ensure that you have R and RStudio installed on your system. RStudio
-will not work if you don\'t have R installed on your machine; they must
-be installed separately. Once they are both installed, you can open
-RStudio and use that without having an R window open.
+All datasets and examples are present in `~/Desktop/R-Programming/lesson1/` folder. 
 
 
 
 ### Using R and RStudio
-
-
 
 Out of the box, R is completely usable. Open R on your machine. Let\'s use R for some basic arithmetic
 such as addition, multiplication,
@@ -89,9 +55,6 @@ you\'re familiar with. One you may not have used before is exponentiate,
 where you use two asterisks, for example, 4 \*\* 2, which you can read
 as 4 to the power of 2.
 
-Once you want to start doing math beyond
-basic arithmetic, such as finding square
-roots or summing many numbers, you have to start using functions.
 
 
 #### Executing Basic Functions in the R Console
@@ -142,12 +105,11 @@ all of the parts of your analysis organized in one space in a chosen
 folder on your machine. Any time you start a new project, you should
 start a new project in RStudio by going to **`File`** \|
 **`New Project`**, as shown in the below screenshot, or by clicking the
-new project button (blue, with a green plus sign
-
+new project button (blue, with a green plus sign):
 
 ![](./images/06e0e2ec-a142-4179-b832-d38db1376d1a.png)
 
-).
+
 
 
 ![](./images/ff54b915-d9f0-4cf9-b686-4c190278e75a.png)
@@ -319,16 +281,6 @@ the base functions that are built into R. We also built a few custom
 functions, `area_triangle()` and `area_rectangle()`,
 in the last section.
 
-Now, let\'s talk about packages. Anyone can write an R package of useful
-functions and publish it for use by others.
-Packages are usually made available on the **Comprehensive R Archive
-Network** (**CRAN**) website, or
-**Bioconductor**, a collection of packages for bioinformatics
-and other uses. Both these sites conduct a thorough
-review of submitted packages before
-publishing them on their sites, so package developers often keep beta
-versions of packages, or those that are useful but may not pass the
-inspections, on GitHub.
 
 RStudio makes installing packages very easy. There are two ways to do
 so: either type `install.packages("package_name")` in a script
@@ -438,34 +390,12 @@ Variable Types and Data Structures
 
 
 
-In this section, we\'ll begin first with an
-exploration of different variable types: numeric, character, and dates.
-We\'ll then look at different data structures
-in R: vectors, lists, matrices, and data frames.
+#### Variable Types
 
-
-### Variable Types
-
-
-
-Variable types exist in all programming
-languages and will tell the computer how to store and access a variable.
 
 First, know that all variables created in R will have a class and a
 type. You can look at the class or type of anything in R using the
-`class()` and `typeof()` functions, respectively.
-
-The class of an object is a broad designation, for example,
-`character`, `numeric`, `integer`, and
-`date`. These are very broad categories, and type elaborates
-more specifically on what type of variable it is, for example, a
-variable of class `date` can be of type `character`
-or `POSIXct`, depending on how it is stored. Type drills down
-into the details of a variable and how it\'s been stored in R, though
-sometimes class and type can be the same. For example, integers are of
-class and type `integer`, and character strings are of type
-and class `character`. Let\'s examine the following code
-snippet:
+`class()` and `typeof()` functions, respectively. Let\'s examine the following code snippet:
 
 ``` 
 x &lt;- 4.2
@@ -541,12 +471,6 @@ typeof(z)
 
 #### Character
 
-
-
-Character data is always mentioned in
-quotation marks; anything contained in quotation marks is called a
-character string. Usually, character data is of both class and type
-`character`.
 
 Let\'s create and check the `class()` and
 `typeof()` of different character objects in R. Follow the
@@ -739,24 +663,6 @@ A pencil or pen, plus RStudio and R installed on your machine.
 
 
 
-### Data Structures
-
-
-
-There are a few different data structures in
-R that are crucial to understand, as they directly pertain to the use of
-data! These include vectors, matrices, and dataframes. We\'ll discuss
-how to tell the difference between all of these, along with how to
-create and manipulate them.
-
-Data structures are extremely important in R for manipulating,
-exploring, and analyzing data. There are a few key structures that will
-hold the different types of variables we discussed in the last
-subsection, and more. R uses different words for some of these data
-structures than other programming languages, but the idea behind them is
-the same.
-
-
 #### Vectors
 
 
@@ -795,15 +701,6 @@ class(vector_example_2)
 ![](./images/964d9ef6-22e4-4b1a-a10d-85742f2425d9.png)
 
 
-To access a certain item in the vector, you can use indexing. R is a
-1-indexed language, meaning all counting starts at 1 (versus other
-languages, such as Python, which are 0-indexed---that is, in Python, the
-first element of the array is said to be at the 0th position).
-
-The first item in a vector can be accessed using `vector[1]`,
-and so on. If the index doesn\'t exist in the vector, R will simply
-output an `NA`, which is R\'s default way of indicating a
-missing value. We\'ll cover missing values in R at length in Lab 3.
 
 Let us now use `c()` to create a vector, examine its class and
 type, and access different elements of the vector using vector indexing.
@@ -902,17 +799,6 @@ L1 &lt;- list(1, "2", "Hello", "cat", 12, list(1, 2, 3))
 ```
 
 
-Let\'s walk through the elements of this list. First, we have the number
-1. Then, a character string, \"2\", followed by the character string
-\"Hello\", the character string \"cat\", the number 12, and then a
-nested list, which contains the numbers 1, 2, and 3.
-
-Accessing these different parts of the list that we just created is
-slightly different---now, you are using list indexing, which means using
-double square brackets to look at the different items. 
-
-You\'ll need to enter `L1[[1]]` to view the number 1 and
-`L1[[4]]` to see \"cat\".
 
 To get inside the nested list, you\'ll have to use
 `L1[[6]][1]` to see the number 1. `L1[[6]]` gets us
@@ -948,14 +834,6 @@ this code:
 
 #### Matrices
 
-
-
-A matrix is a 2D vector with rows and
-columns. In R, one requirement for matrices is that every data element
-stored inside it be of the same type (all `character`, all
-`numeric`, and so on). This allows you to perform arithmetic
-operations with matrices, if, for example, you have two that are both
-`numeric`.
 
 Let\'s use `matrix()` to create a matrix, examine its class,
 use `rownames()` and `colnames()` to set row and
@@ -1016,11 +894,6 @@ The output of the code is as follows:
 
 #### Dataframes
 
-
-
-A dataframe in R is a 2D object where the
-columns can contain data of different classes and types. This is very
-useful for practical data storage.
 
 Dataframes can be created by using `as.data.frame()` on
 applicable objects or by column- or row-binding vectors using
@@ -1130,26 +1003,6 @@ Hint: type `?LETTERS` into your console.
     
 
 
-
-Basic Flow Control
-------------------------------------
-
-
-
-Flow Control includes different kinds of
-loops that you can use in R, such as the `if/else`,
-`for`, and `while` loops. While many of the concepts
-are very similar to how flow control and loops are used in other
-programming languages, they may be written differently in R.
-
-
-**Note:**
-
-Generally speaking, most loops are not considered best practice for
-coding in R. Some alternatives to loops, especially for loops, include
-the apply family of functions and functions contained in the
-`purrr` package, which you are encouraged to look up and learn
-about after this course.
 
 
 
@@ -1316,11 +1169,6 @@ It is displayed on the screen, as shown in the following screenshot:
 ![](./images/dba3cd78-b2db-4e07-b33c-5c75a71df4c6.png)
 
 
-The R function `seq_along()` is very helpful for the
-`for` loops, because it automatically moves along the number
-of columns of the dataframe (if that\'s the input) or more generally,
-iterates along the number of items contained
-in whatever is input into it.
 
 We also chose to print the mean of each column in this particular
 `for` loop. Accessing the columns is done using indexing, so
@@ -1557,11 +1405,6 @@ The output for the third step will be as follows:
 ![](./images/d3c46fbd-0a41-43a9-a33b-7e454882f3e1.png)
 
 
-It\'s important as you code in R that you understand how loops work,
-both because other people will write code
-with them and so you need to understand how other methods that can be
-substituted in for loops in R work.
-
 
 
 ### Activity: Building Basic Loops
@@ -1646,21 +1489,6 @@ Data Import and Export
 ----------------------------------------
 
 
-
-We\'ve used some of R\'s built-in datasets so
-far in this course, but most of the time, data scientists will have to
-import and export data that comes from external sources in and out of R.
-Data can come and go in many different forms, and while we\'ll not cover
-them all here, we\'ll touch on some of the most common forms.
-
-Data import and export are truly one
-subsection in R, because most of the time, the functions are opposites:
-for example, `read.csv()` takes in the character string name
-of a `.csv` file, and you save the output as a dataset in your
-environment, while `write.csv()` takes in the name of the
-dataset in your environment and the character string name of a file to
-write to.
-
 There are built-in functions in R for the data import and export of many
 common file types, such as `read.table()` for
 `.txt` files, `read.csv()` for
@@ -1682,13 +1510,12 @@ RStudio also has point and click methods for importing data. If you
 navigate to **`File`** \| **`Import Dataset`**, you\'ll see that you
 have six options:
 
-
--   **`From text (base)`**
--   **`From text (readr)`**
--   **`From Excel`**
--   **`From SPSS`**
--   **`From SAS`**
--   **`From Stata`**
+- `From text (base)`
+- `From text (readr)`
+- `From Excel`
+- `From SPSS`
+- `From SAS`
+- `From Stata`
 
 
 These options call the required packages and functions that are
@@ -1696,12 +1523,12 @@ necessary to input data of that type into R. The packages and functions
 are listed in order, as follows:
 
 
--   `base::read.table()`
--   `readr::read_* functions`
--   `xlsx::read_excel()`
--   `haven::read_sav()`
--   `haven::read_sas()`
--   `haven::read_dta()`
+- `base::read.table()`
+- `readr::read_* functions`
+- `xlsx::read_excel()`
+- `haven::read_sav()`
+- `haven::read_sas()`
+- `haven::read_dta()`
 
 
 One advantage of loading data using one of
@@ -1974,14 +1801,8 @@ Let\'s now use the `xlsx` package to import and export
 Microsoft Excel spreadsheet data. Follow the steps given below:
 
 
-1.  Navigate to the `.xlsx` version of the students dataset on
-    GitHub, at the following link:
-    <https://github.com/fenago/R-Programming/blob/master/lesson1/students.xlsx>.
-2.  Hit **`View Raw`** and it will automatically download to your
-    computer.
-3.  Move the file from your **`Downloads`** folder to the working
-    directory folder on your computer.
-4.  Install and load the `xlsx` package by using the following
+1.  Dataset `students.xlsx` is already available in lesson1 folder.
+2.  Install and load the `xlsx` package by using the following
     code:
 
 
@@ -2114,27 +1935,7 @@ Getting Help with R
 
 
 
-We\'ve covered a lot in this lab, and this is the last thing that
-you\'ll carry throughout this course and into the rest of the time you spend learning R: how do you get help
-with R programming and data science?
-
-
-### Package Documentation and Vignettes
-
-
-
-One advantage of using R is that it is a very
-well-documented programming language. This is often because there is a
-certain amount of documentation that is required by CRAN before it will
-publish a package on the website.
-
-It is considered a best practice to document
-your packages or functions well, no matter where you are publishing
-them. Good documentation is important, both for other people who may use
-your functions and also for yourself when you return to them in the
-future.
-
-As such, there are a few built-in ways in R to get help. The first way
+There are a few built-in ways in R to get help. The first way
 to get help is to use the package documentation. You can access it by
 using the `help()` function or the question mark
 `?`. These will do the same thing. For example, say you (this
@@ -2268,53 +2069,6 @@ A web browser capable of looking at an R package vignette.
     to understand more about how the main five verbs work through
     experimentation.
 
-
-
-
-### RStudio Community, Stack Overflow, and the Rest of the Web
-
-
-
-Two of the main community-based resources
-online are the official RStudio Community and
-Stack Overflow.
-
-**Stack Overflow** (**SO**)
-<https://stackoverflow.com/> is a fantastic resource for a variety of
-questions relating to technology, with no
-limit on the different kinds of programming languages or analysis types
-you can ask questions about---the sky\'s the limit! There is an r tag
-(<https://stackoverflow.com/questions/tagged/r>) that has, as of late
-March 2018, 230,000+ tagged questions in it. Often, the best way to find
-what you\'re looking for is to go to a search engine, type something
-along the lines of how to relevel a factor in r, and often a SO post (or even
-multiple!) will be the top hits.
-
-The RStudio Community (<https://community.rstudio.com/>) website is a
-forum that\'s run by RStudio themselves. It is expected that questions
-will be R-focused. They are often answered by the very people who wrote
-the packages and functions you are asking questions about. Questions are
-tagged by category, such as **`RMarkdown`**, **`General`**, and
-**`tidyverse`**, to help you navigate. The forum is searchable and
-filterable, and is a great place to get answers to any R-related
-questions.
-
-More generally, **`#rstats`** on twitter
-(<https://twitter.com/search?q=%23rstats&src=typd>) is a great place to
-go for R questions, tips and tricks, and to find a community of people
-who are all over the R usage spectrum, from beginners to seasoned pros,
-who have often developed the packages used in R every day. Many R
-experts check the **`#rstats`** hashtag for questions, so it\'s another
-great way to get answers to R and data science queries. It\'s also a
-great way to find blog posts about R, which often include worked out
-examples that someone has solved, which are often useful as you are
-learning.
-
-As learners new to R, you\'re sure to have many questions as you move on
-in your journey. Hopefully, you now know about and are even beginning to
-get comfortable with the many places both built into R and on the
-internet that you can go to for help, and eventually even help others as
-you gain confidence and skills.
 
 
 
