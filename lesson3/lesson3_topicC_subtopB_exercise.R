@@ -4,8 +4,8 @@ install.packages("readr")
 library(readr)
 
 #load in students and students 2 from github
-students <- read_csv("https://raw.githubusercontent.com/TrainingByPackt/Beginning-Data-Science-with-R/master/lesson3/students.csv")
-students2 <- read_csv("https://raw.githubusercontent.com/TrainingByPackt/Beginning-Data-Science-with-R/master/lesson3/students2.csv")
+students <- read_csv("https://raw.githubusercontent.com/fenago/R-Programming/master/lesson3/students.csv")
+students2 <- read_csv("https://raw.githubusercontent.com/fenago/R-Programming/master/lesson3/students2.csv")
 
 #use str to examine both datasets
 str(students)

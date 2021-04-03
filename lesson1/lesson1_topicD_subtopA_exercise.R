@@ -3,18 +3,18 @@
 #import csv, 3 ways
 
 #with read.table
-students_csv1 <- read.table("https://raw.githubusercontent.com/TrainingByPackt/Beginning-Data-Science-with-R/master/lesson1/students.csv", 
+students_csv1 <- read.table("https://raw.githubusercontent.com/fenago/R-Programming/master/lesson1/students.csv", 
                             header = TRUE, 
                             sep = ",")
 
 #with read.csv
-students_csv2 <- read.csv("https://raw.githubusercontent.com/TrainingByPackt/Beginning-Data-Science-with-R/master/lesson1/students.csv")
+students_csv2 <- read.csv("https://raw.githubusercontent.com/fenago/R-Programming/master/lesson1/students.csv")
 
 #with read_csv
 install.packages("readr")
 library(readr)
 
-students_csv3 <- read_csv("https://raw.githubusercontent.com/TrainingByPackt/Beginning-Data-Science-with-R/master/lesson1/students.csv")
+students_csv3 <- read_csv("https://raw.githubusercontent.com/fenago/R-Programming/master/lesson1/students.csv")
 
 #examine 2 & 3, paying attention to variable types
 str(students_csv2)
