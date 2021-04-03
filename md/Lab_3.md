@@ -127,20 +127,6 @@ The output is as follows:
 ![](./images/3b158dca-a2f9-4a7d-a25d-eb63b2b1f2c3.png)
 
 
-However, only the output where we\'ve used `cyl` as a factor
-variable is the correct model output. We want the model to know that
-that cylinder is a factor and measures the difference in miles per gallon between four and six cylinders and four
-and eight cylinders; this is the correct way to build the model.
-
-When a variable is categorical and is coded with text, for example,
-`Months = "January"`, `"February"`,
-`"March"`, and so on, modeling functions in R automatically
-treat the variable as categorical, but you should still code it as a
-factor variable. This is because of the second reason for using factors.
-
-Plots will not render correctly with either base plots or
-`ggplot2` plots if you do not have your factor variables
-explicitly declared.
 
 We can rerun the code to plot the `cyl` variable without
 transforming it into a factor, as follows:
@@ -242,27 +228,6 @@ mtcars[,factors] &lt;- data.frame(apply(mtcars[,factors], 2, as.factor))
 ```
 
 
-Here, first, you create a vector of the names of variables you\'d like
-to turn into factors, called `factors`. Then, using
-`data.frame()`, which creates a data frame, you apply the
-`as.factor()` function to only the desired columns of the
-dataset `mtcars`, which are accessed using
-`mtcars[,factors]`.
-
-The `apply` family of functions provides an efficient way to
-perform another function on multiple rows or columns of a dataset at
-once. The input `2` indicates to `apply()` that
-`as.factor()` should be applied to columns of the dataset
-`mtcars`. If we had input `1`,
-`as.factor()` would be applied to rows of `mtcars`
-instead (and likely, this would have returned an error). Applying
-`as.factor()` by row doesn\'t really make sense if you think
-about a row of a dataset. A row of `mtcars` contains all of
-the information about the car: its `mpg`, `cyl`,
-`disp`, `hp`, and so on, and only
-some of these variables are
-factor/categorical variables. This logic will apply to most datasets you
-use!
 
 We can check to be sure this worked by using `str()` as
 follows:
@@ -352,7 +317,7 @@ str(band_instruments)
 
 
 **Output**: The following is the output of the
-code mentioned in [*Step 2*]:
+code mentioned in *Step 2*:
 
 
 ![](./images/beedd1a6-f26d-48e7-b086-6b2fb2034b70.png)
@@ -736,22 +701,19 @@ table(mtcars$mpg)
 ```
 
 
-**Output**: The following is the output we get as we execute
-the code mentioned in[*Step 1*]:
+**Output**: The following is the output we get as we execute the code mentioned in *Step 1*:
 
 
 ![](./images/a800662c-14e7-4d4a-a3f0-62ea9f53bb13.png)
 
 
-The following is the output we get as we execute the code mentioned in
-[*Step 2*]:
+The following is the output we get as we execute the code mentioned in *Step 2*:
 
 
 ![](./images/bb550297-273f-4352-86a0-c8bed8573b75.png)
 
 
-The following is part of the output (it\'s very long) we get as we
-execute the code mentioned in [*Step 3*]:
+The following is part of the output (it\'s very long) we get as we execute the code mentioned in [*Step 3*]:
 
 
 ![](./images/7d761134-1b54-4473-bdc9-8442dcfba004.png)
@@ -762,17 +724,6 @@ The following is the output we get as we execute the code mentioned in *Step 4*:
 
 ![](./images/b8f39af6-7c39-4865-b7a1-3a9a6748747e.png)
 
-
-For any table above a two-way (or two - variable) table, you\'re better
-off turning to methods provided by the `dplyr` package. For
-example, if we wanted the counts for diamonds by `cut`,
-`color`, and `clarity`, it\'s easier to read a table
-that\'s been created with `dplyr` methods. `dplyr`
-will automatically print to the console, but if you\'d like to access
-the tables you create later, you\'ll need to save the output to
-your environment. There is a lot of data
-summarizing that can be accomplished with the `dplyr` package.
-Let\'s learn some of the things it can accomplish in the section.
 
 
 
@@ -1187,8 +1138,7 @@ the code from the second step:
 ![](./images/fa984932-cabf-4c49-a2ed-cce264d6596d.png)
 
 
-The following is the output we get as we
-execute the code from the third step:
+The following is the output we get as we execute the code from the third step:
 
 
 ![](./images/d0c7322d-58a1-4623-b3b3-715b1bdb6d41.png)
@@ -1287,34 +1237,17 @@ all_equal(midwest, midwest_back)
 ```
 
 
-**Output**: The following is the output we get as we execute
-the code mentioned in [*Step 2*]:
+**Output**: The following is the output we get as we execute the code mentioned in *Step 2*:
 
 
 ![](./images/04c0aff2-bd75-49fb-8411-846f580ae3a3.png)
 
 
- 
 
-The following is the output we get as we
-execute the code mentioned in [*Step*][*5*]: 
+The following is the output we get as we execute the code mentioned in *Step 5*: 
 
 
 ![](./images/578cca38-056b-46b3-adb7-aefe40cf94a4.png)
-
-
-
-**Note:**
-
-If you use `rbind()` to combine data, you\'ll need the same
-amount of columns in the data you are combining. If you use
-`cbind()`, you\'ll need to have the same number of rows in the
-data you\'re combining.
-
-
-One nice feature of the functions `rbind()` and
-`cbind()` is that they can combine more than
-two items to create a new dataset.
 
 
 
@@ -1380,42 +1313,11 @@ the code `class(all1)`:
 ![](./images/b8289742-68ab-4bfc-a8f5-1d61b7943efb.png)
 
 
-The following is the output we get as we
-execute the code mentioned in the last [*Step 4*]:
+The following is the output we get as we execute the code mentioned in the last *Step 4*:
 
 
 ![](./images/4fef3d79-40e4-43de-b35d-2c555b3b9ee4.png)
 
-
-
-
-#### Splitting Strings
-
-
-
-One other useful type of splitting is the ability to split strings.
-While this isn\'t a data splitting and unsplitting method, it will often
-be useful to do the following to manipulate variables in a dataset. The
-most efficient way to accomplish string splitting in R is to use the
-`stringr` package, which contains a variety of functions
-that make working with strings far simpler
-than alternative methods in base, which include `subset()` and
-`gsub()`. We won\'t cover these methods here, however the
-`stringr` methods are highly recommended, are far more
-versatile, and often don\'t require you to write complicated regex
-patterns for matching.
-
-
-**Note:**
-
-A [*regex*], or regular expression, is a search method used
-to match certain things in text. Look up regex on the search engine of
-your choice and read more about them if you\'re interested.
-
-
-From the `stringr` package, the `str_split()`
-function in particular is useful. Let\'s dive in and look at some
-different ways it can be used.
 
 
 
@@ -1504,7 +1406,7 @@ names_split_a[[5]]
 
 
 **Output**: The following is the output we get upon executing
-the code mentioned in [*Step 2*]:
+the code mentioned in *Step 2*:
 
 
 ![](./images/f655cd4f-8024-4f59-a7c6-6781681bd32a.png)
@@ -1575,7 +1477,7 @@ paste(a, b, c, "x", 10)
 
 
 **Output**: The following is the output we get upon executing
-the code mentioned in [*Step 2*]:
+the code mentioned in *Step 2*:
 
 
 ![](./images/ddce5b4c-e88d-48d2-bb5a-67df14d9eaae.png)
@@ -1878,8 +1780,7 @@ data and perform data analysis projects. You will probably run across
 more questions about your data if you use it to build statistical
 models.
 
-This course has taken
-you through variable types, basic flow control, data import and export,
+This course has taken you through variable types, basic flow control, data import and export,
 data visualization with base plots and ggplot2, summarizing and
 aggregating data, plus joins and merging to help you build a foundation
 for how to use R to work with data.

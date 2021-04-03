@@ -1983,13 +1983,6 @@ in multiple packages, such as `stats::filter` and
 `dplyr::filter`!)
 
 
-In addition to the often very helpful and
-thorough documentation built into R, some packages also have one or more
-vignettes, which are documents written by the author(s) of the
-package that are intended to demonstrate the
-main functionality of the functions contained in the package. You can
-bring these up inside RStudio in a number of ways.
-
 Let\'s use the vignette-related
 functions `browseVignettes()`and`vignettes()`to
 explore the vignettes for R packages. Follow the steps given below: 

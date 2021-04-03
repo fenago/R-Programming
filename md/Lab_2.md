@@ -37,22 +37,11 @@ All datasets and examples are present in `~/Desktop/R-Programming/lesson2/` fold
 
 
 
+
 #### The plot() Function
 
 
-![](./images/3bff829d-bfe1-4035-beae-78889993464e.png)
-
-
-The `plot()` function is the backbone of base plots in R. It
-provides capability for generic [*X-Y*] plotting. It requires
-only one argument, [*x*], which should be something to
-plot---a vector of numbers, one variable of a dataset, or a model object
-such as linear or logistic regression. You
-can, of course, add a second variable, [*y*], plus an
-assortment of options to customize the plot, but [*x*] is the
-only input required for the function to run successfully.
-
-
+<img src="./images/3bff829d-bfe1-4035-beae-78889993464e.png" alt="drawing" style="width:275px;"/>
 
 
 **Note:**
@@ -64,30 +53,18 @@ window, under the **`Plots`** tab.) You can, at any time, click the
 you a better look:
 
 
-![](./images/b7166553-b147-4efd-a885-b3d8f92a6f96.png)
+<img src="./images/b7166553-b147-4efd-a885-b3d8f92a6f96.png" alt="drawing" style="width:275px;"/>
 
 
 
-If we first load the datasets library, we gain access to a number of
-built-in datasets in R that will be useful for both base plotting and
-using ggplot2. To begin with, we\'ll use the `mtcars` dataset.
-`mtcars` is a very famous example dataset, and  its
-description (accessed using `?mtcars`) is as follows:
-
-
-> [*The data was extracted from the 1974 Motor Trend US magazine, and
-> comprises fuel consumption and 10 aspects of automobile design and
-> performance for 32 automobiles (1973--74 models).*]
-
-
-Minimally, we can plot just one variable of
+We can plot just one variable of
 `mtcars`, for example `mpg` or the miles per gallon
 of the cars. This generates a very basic plot of `mpg` on the
 y-axis, with `index` on the x-axis, literally corresponding to
 the row index of each observation, as follows:
 
 
-![](./images/ff29209f-e60f-4fd6-827e-8414e7b69ba2.png)
+<img src="./images/ff29209f-e60f-4fd6-827e-8414e7b69ba2.png" alt="drawing" style="width:275px;"/>
 
 
 This plot isn\'t very informative, but it is powerful in terms of seeing
@@ -101,7 +78,7 @@ plot(mtcars$wt, mtcars$mpg)
 
 
 
-![](./images/9b795f89-5350-4035-afaa-ae54550d00f1.png)
+<img src="./images/9b795f89-5350-4035-afaa-ae54550d00f1.png" alt="drawing" style="width:275px;"/>
 
 
 If we plot `mpg` versus `wt` ([*y*] vs.
@@ -143,7 +120,7 @@ plot(as.factor(mtcars$cyl))
 
 
 
-![](./images/4ddd8b40-6b4b-490e-bd0d-1b2bbc65df10.png)
+<img src="./images/4ddd8b40-6b4b-490e-bd0d-1b2bbc65df10.png" alt="drawing" style="width:275px;"/>
 
 
 Let\'s now create plots using factor
@@ -172,7 +149,7 @@ when the `gear` variable is plotted without changing it to the
 factor variable:
 
 
-![](./images/765f6eb5-d984-4b66-9f57-d6fed965df37.png)
+<img src="./images/765f6eb5-d984-4b66-9f57-d6fed965df37.png" alt="drawing" style="width:275px;"/>
 
 
 The following histogram/bar chart is the output we get when the
@@ -180,7 +157,7 @@ The following histogram/bar chart is the output we get when the
 variable:
 
 
-![](./images/80bd9292-d1b1-4614-9a9b-3cb31717ac4e.png)
+<img src="./images/80bd9292-d1b1-4614-9a9b-3cb31717ac4e.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -235,7 +212,7 @@ plot(mtcars_lm)
 
 
 
-![](./images/b622b20d-1988-4ea8-8355-ef6963205da3.png)
+<img src="./images/b622b20d-1988-4ea8-8355-ef6963205da3.png" alt="drawing" style="width:275px;"/>
 
 
 This resets your Global Options in RStudio. So now, every time you try
@@ -300,7 +277,7 @@ looking at it before you run this line.
 `plot()` function as mentioned in [*Step 3*].
 
 
-![](./images/8f6ce590-95aa-4439-9fcf-be1e659530df.png)
+<img src="./images/8f6ce590-95aa-4439-9fcf-be1e659530df.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -328,7 +305,7 @@ titles and labels, and is far more understandable, as shown in the
 following screenshot:
 
 
-![](./images/749cf7b4-2244-4822-97b3-80fdb6f49a2b.png)
+<img src="./images/749cf7b4-2244-4822-97b3-80fdb6f49a2b.png" alt="drawing" style="width:275px;"/>
 
 
 Let\'s now add titles and axis labels to
@@ -364,10 +341,10 @@ plot(iris$Petal.Length, iris$Petal.Width,
 
 
 **Output**: The following is the output we get when we
-execute the code line mentioned in [*Step 2*]:
+execute the code line mentioned in *Step 2*:
 
 
-![](./images/cab2d0e2-9421-4ad3-8015-20d736656f6b.png)
+<img src="./images/cab2d0e2-9421-4ad3-8015-20d736656f6b.png" alt="drawing" style="width:275px;"/>
 
 
 The following is the output we get when we
@@ -375,7 +352,7 @@ execute the code mentioned in [*Step
 3*]:
 
 
-![](./images/7187c937-424f-444d-9504-bd1b7f2f2801.png)
+<img src="./images/7187c937-424f-444d-9504-bd1b7f2f2801.png" alt="drawing" style="width:275px;"/>
 
 
 If we decide we\'d like to plot in a different color, say red, it\'s as
@@ -488,7 +465,7 @@ base plot methods.
 
 
 
-![](./images/851506e8-31eb-4576-99a8-5e4bf51e528b.png)
+<img src="./images/851506e8-31eb-4576-99a8-5e4bf51e528b.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -498,7 +475,7 @@ base plot methods.
 
 
 
-![](./images/b45d8b96-8969-4fb5-8002-5e212228afb3.png)
+<img src="./images/b45d8b96-8969-4fb5-8002-5e212228afb3.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -510,7 +487,7 @@ base plot methods.
 
 
 
-![](./images/ad394b13-f5a6-4a19-8641-37cb2a9485ad.png)
+<img src="./images/ad394b13-f5a6-4a19-8641-37cb2a9485ad.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -520,7 +497,7 @@ base plot methods.
 
 
 
-![](./images/f1c8a48e-f7f3-4824-b270-ac9c8989e17e.png)
+<img src="./images/f1c8a48e-f7f3-4824-b270-ac9c8989e17e.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -561,7 +538,7 @@ methods. Then, when you load ggplot2 in RStudio using
 `library(ggplot2)`, it immediately suggests the ggplot2
 **Stack Overflow** tag as a good place to go for any help you might need ggplotting.
 
-![](./images/cab5df49-68ba-4aad-b22f-fd89a356536c.png)
+<img src="./images/cab5df49-68ba-4aad-b22f-fd89a356536c.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -584,11 +561,11 @@ plotted both with `plot()` and `ggplot()`,
 respectively:
 
 
-![](./images/128183ab-07e7-432f-903a-7b41281c1709.png)
+<img src="./images/128183ab-07e7-432f-903a-7b41281c1709.png" alt="drawing" style="width:275px;"/>
 
 
 
-![](./images/080f14da-c60b-43e8-ad03-7dad1433d50c.png)
+<img src="./images/080f14da-c60b-43e8-ad03-7dad1433d50c.png" alt="drawing" style="width:275px;"/>
 
 
 This is the built-in `cars` dataset, which contains only two
@@ -662,20 +639,6 @@ ggplot(data = &lt;DATA&gt;, aes(&lt;GLOBAL MAPPINGS&gt;)) + &lt;GEOM_FUNCTION&gt
 ```
 
 
-Global mappings will apply globally to every layer of your plot. This is
-a good place to put the variables you\'d like to begin plotting and any
-settings you\'d like to apply to everything, for example declaring
-`alpha = 0.6` here would mean all of your points in a
-scatterplot are at 60% transparency.
-
-Local mappings will either override or add to
-any global mappings and apply to that layer only. As you\'ll see later
-on, you can include a number of layers in your ggplot (either by
-plotting multiple variables or by adding layers that include titles or
-themes, for example), so any local mappings should be applied inside the
-`geom_*()` or appropriate function (for example,
-`ggtitle()`).
-
 There are a few things you should know about creating ggplots that will
 help you along the way. Firstly, you can save a ggplot call and use it
 for multiple graphs, for example:
@@ -697,36 +660,11 @@ saved in your R environment as a list, and you can view it in the
 environment by hitting the magnifying glass icon next to its name:
 
 
-![](./images/0ade013f-211b-49e2-85eb-39c8ff5c2590.png)
+<img src="./images/0ade013f-211b-49e2-85eb-39c8ff5c2590.png" alt="drawing" style="width:275px;"/>
 
 
-You can see from inside the `mtcars_ggplot` object that it has
-saved the `mtcars` dataset in the data list. There are
-currently no layers, because we haven\'t told it what kind of plot we
-want yet (or any titles or axis labels). You can see in the mapping list
-that [*x*] is now the `wt` variable and
-[*y*] is the `mpg` variable, which we indicated by
-putting those variables in as mapping arguments inside
-`aes()`. The default labels, which are taken directly from the
-variable names as they are saved in the dataset, are also listed in the
-labels list, as [*x*] = `wt` and [*y*] =
-`mpg`, which are both character strings.
 
-The second line of code plots a basic
-scatterplot of miles per gallon by weight of the car. It calls the
-`mtcars_ggplot` object for beginning guidance
-(`DATA` and `MAPPINGS`) and then uses
-`geom_point()` as its `GEOM`. The third line of code
-also creates a scatterplot, similarly calling `mtcars_ggplot`
-as its guide, but adds in an additional local mapping inside
-`geom_point()`, declaring that it wants the points colored
-(`col`) by the factor variable `cyl`, which
-indicates how many cylinders the car has. If you first load
-`mtcars` in your R environment, if you haven\'t already, using
-`data("mtcars")`, all of this code is executable in R. Feel
-free to try it to see the different plots.
-
-Secondly, the plus signs you\'ll need to add layers to a
+The plus signs you\'ll need to add layers to a
 `ggplot()` object must [*always*] come at the end
 of a line. The following code will run successfully to create the plot
 we saw at the beginning of this subtopic:
@@ -745,7 +683,7 @@ ggplot(cars, aes(speed, dist)) + geom_point()
 
 
 
-![](./images/66b3e960-d68e-41f8-aec3-88fd1cb0b462.png)
+<img src="./images/66b3e960-d68e-41f8-aec3-88fd1cb0b462.png" alt="drawing" style="width:275px;"/>
 
 
 If you attempt to run code with the plus sign at the beginning of a
@@ -759,16 +697,8 @@ Error in +geom_point() : invalid argument to unary operator
 ```
 
 
-Let\'s walk through some basic types of ggplots using the
-`mtcars` dataset, which we\'ve used a few times so far and
-will continue to use throughout the course. Built-in datasets in R are
-convenient to use for trying to learn new things; plus they can be
-helpful to use for creating examples for others when we need help with
-something.
-
 
 #### Histogram
-
 
 
 When you have one continuous variable, it\'s a good idea to use a
@@ -790,37 +720,29 @@ This code will throw a warning:
 
 
 
-![](./images/609554d5-0596-404a-b4a3-4ad1208a5c09.png)
+<img src="./images/609554d5-0596-404a-b4a3-4ad1208a5c09.png" alt="drawing" style="width:275px;"/>
 
 
-The default number of bins is always 30, and you should always change it
-and find a better value for your data. The default means that it takes
-the range of the data (here, `mpg` is between 10.4 and 33.9)
-and divides it by 30 to create bins---which, in this case, is a bit
-large, and causes our binwidth to be equal to 0.783, which is tiny!
-Let\'s choose a few different bin widths to see what happens. Note that
-you need to specify binwidth inside of
-`geom_histogram()` as a local mapping.
 
 `binwidth = 10` gives us almost no detail---we can see three
 groups of observations of the data:
 
 
-![](./images/602a1546-c9ee-4d54-9ad9-b4e6eff2c872.png)
+<img src="./images/602a1546-c9ee-4d54-9ad9-b4e6eff2c872.png" alt="drawing" style="width:275px;"/>
 
 
 `binwidth = 1` isn\'t bad, but the graph shows some gaps.
 Let\'s see if we can close them:
 
 
-![](./images/7d654641-7996-4e69-95a5-3181a1584a59.png)
+<img src="./images/7d654641-7996-4e69-95a5-3181a1584a59.png" alt="drawing" style="width:275px;"/>
 
 
 Using a binwidth of 3 shows decent amount of
 detail, as shown in the following graph:
 
 
-![](./images/dc819324-560c-4c04-a78e-44b5bd4a7b82.png)
+<img src="./images/dc819324-560c-4c04-a78e-44b5bd4a7b82.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -881,21 +803,21 @@ of the `sleep_total` variable from the `msleep`
 dataset using the code mentioned in [*Step 3*]:
 
 
-![](./images/fb809495-2bcc-47f9-ac3f-fd71cfa7c359.png)
+<img src="./images/fb809495-2bcc-47f9-ac3f-fd71cfa7c359.png" alt="drawing" style="width:275px;"/>
 
 
 The following is the histogram with
 `binwidth = 10`:
 
 
-![](./images/ca074de3-5534-4a81-8753-4f2f795d9ea3.png)
+<img src="./images/ca074de3-5534-4a81-8753-4f2f795d9ea3.png" alt="drawing" style="width:275px;"/>
 
 
 The following is the histogram with
 `binwidth = 1`:
 
 
-![](./images/e4d0f50e-dedb-44d4-8fac-21cc4ede01ce.png)
+<img src="./images/e4d0f50e-dedb-44d4-8fac-21cc4ede01ce.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -916,7 +838,7 @@ ggplot(mtcars, aes(cyl)) + geom_bar()
 
 
 
-![](./images/10481e56-86b7-440f-bb4b-7a996c6b5ba7.png)
+<img src="./images/10481e56-86b7-440f-bb4b-7a996c6b5ba7.png" alt="drawing" style="width:275px;"/>
 
 
 One fun fact is that we can actually create bar charts with the
@@ -933,7 +855,7 @@ You can ignore the warning it will throw;
 this creates the exact same bar chart:
 
 
-![](./images/a932ce7b-0608-456f-bb79-68af11359d9f.png)
+<img src="./images/a932ce7b-0608-456f-bb79-68af11359d9f.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -969,14 +891,14 @@ ggplot(msleep, aes(vore)) + geom_histogram(stat = "count")
 1*]:
 
 
-![](./images/90ffa834-c27b-4219-aca8-5be75bf08d9a.png)
+<img src="./images/90ffa834-c27b-4219-aca8-5be75bf08d9a.png" alt="drawing" style="width:275px;"/>
 
 
 The following is the output we get after
-executing the code mentioned in [*Step 2*]:
+executing the code mentioned in *Step 2*:
 
 
-![](./images/1fd0350f-d712-4b71-8bac-6e265b00ec00.png)
+<img src="./images/1fd0350f-d712-4b71-8bac-6e265b00ec00.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -985,17 +907,7 @@ executing the code mentioned in [*Step 2*]:
 #### Scatterplot
 
 
-
-Two continuous variables are a good candidate
-for a scatterplot, which is created using `geom_point()` in
-ggplot2. You can also create scatterplots using
-`geom_ jitter()`. Using `jitter` instead of
-`point` adds a small amount of noise (tiny on the order of
-decimals) to each observation, spreading them out from one another
-slightly so they\'re easier to see.
-
-We can create a scatterplot with the `wt` and `mpg`
-variables from `mtcars` using the following code:
+We can create a scatterplot with the `wt` and `mpg` variables from `mtcars` using the following code:
 
 ``` 
 ggplot(mtcars, aes(wt, mpg)) + geom_point()
@@ -1003,13 +915,8 @@ ggplot(mtcars, aes(wt, mpg)) + geom_point()
 
 
 
-![](./images/2ddc6cd3-037d-4955-85a9-932eb7cba18b.png)
+<img src="./images/2ddc6cd3-037d-4955-85a9-932eb7cba18b.png" alt="drawing" style="width:275px;"/>
 
-
-The plot shows a clear relationship between
-the weight and miles per gallon of the cars, namely as `wt`
-increases, the `mpg` decreases (we saw this same relationship
-when we created this plot as a base plot earlier in this lab).
 
 Though we won\'t really be able to see much of an effect with this
 dataset, you can create a scatterplot with a bit of jitter introduced
@@ -1024,7 +931,7 @@ You can control exactly how much jitter by inputting `width =`
 some number into `geom_jitter()`:
 
 
-![](./images/3e0f93b0-2310-48e4-b33f-b0862e4a9239.png)
+<img src="./images/3e0f93b0-2310-48e4-b33f-b0862e4a9239.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -1062,14 +969,14 @@ ggplot(msleep, aes(bodywt, sleep_total)) + geom_jitter(width = 50)
 1*]:
 
 
-![](./images/b9aa1fe5-810b-4a9f-8b5b-1faabe3aaa38.png)
+<img src="./images/b9aa1fe5-810b-4a9f-8b5b-1faabe3aaa38.png" alt="drawing" style="width:275px;"/>
 
 
 The following is the output we get when we
-execute the code mentioned in [*Step 2*]:
+execute the code mentioned in *Step 2*:
 
 
-![](./images/fc32fb08-464a-4c70-b8f0-b2e7407b4389.png)
+<img src="./images/fc32fb08-464a-4c70-b8f0-b2e7407b4389.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -1115,7 +1022,7 @@ ggplot(mtcars, aes(as.factor(cyl), mpg)) + geom_boxplot()
 Thus, we get the following graph as an output:
 
 
-![](./images/d10d4754-edb1-419f-8c97-288362520742.png)
+<img src="./images/d10d4754-edb1-419f-8c97-288362520742.png" alt="drawing" style="width:275px;"/>
 
 
 Of course, now the axis label reads `as.factor(cyl)`, because
@@ -1154,7 +1061,7 @@ ggplot(msleep, aes(vore, sleep_total)) + geom_boxplot()
 executing the preceding code:
 
 
-![](./images/dd01850b-7aa2-46ff-bd51-9cd09586383f.png)
+<img src="./images/dd01850b-7aa2-46ff-bd51-9cd09586383f.png" alt="drawing" style="width:275px;"/>
 
 
 While these four types of plots are far from everything available in
@@ -1205,7 +1112,7 @@ preceding exercises.
  
 
 
-![](./images/7669f2e1-9d8a-446a-a870-5975c711404f.png)
+<img src="./images/7669f2e1-9d8a-446a-a870-5975c711404f.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -1215,7 +1122,7 @@ preceding exercises.
 
 
 
-![](./images/83a5c790-e460-4ed1-99d8-d2f5269678cd.png)
+<img src="./images/83a5c790-e460-4ed1-99d8-d2f5269678cd.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -1226,7 +1133,7 @@ preceding exercises.
 
 
 
-![](./images/ffb45145-c47d-4e49-af3f-4d0faba9b895.png)
+<img src="./images/ffb45145-c47d-4e49-af3f-4d0faba9b895.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -1236,7 +1143,7 @@ preceding exercises.
 
 
 
-![](./images/66550b1c-2506-48a4-aced-b9a902e4afcb.png)
+<img src="./images/66550b1c-2506-48a4-aced-b9a902e4afcb.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -1268,7 +1175,7 @@ A legend appears to let us know which color corresponds to which number
 of gears, as shown in the following graph:
 
 
-![](./images/cee1f3e8-9f16-4418-ab21-7b13dd0f5b83.png)
+<img src="./images/cee1f3e8-9f16-4418-ab21-7b13dd0f5b83.png" alt="drawing" style="width:275px;"/>
 
 
 The `fill` is inside of `aes()` and the variable is
@@ -1303,7 +1210,7 @@ This produces the following graph of the bar chart of the count of cars
 of each cylinder type, but the bars have been colored light blue:
 
 
-![](./images/3605a6a8-331b-4a0f-b87e-3f34abe4dfcc.png)
+<img src="./images/3605a6a8-331b-4a0f-b87e-3f34abe4dfcc.png" alt="drawing" style="width:275px;"/>
 
 
 There are some very helpful global and local options that you\'ll
@@ -1351,7 +1258,7 @@ ggplot(mtcars, aes(cyl, fill = gearfactor)) + geom_bar(position = "dodge")
 The output will be as shown in the following screenshot:
 
 
-![](./images/58b699cd-eef0-48de-a6de-28432690929e.png)
+<img src="./images/58b699cd-eef0-48de-a6de-28432690929e.png" alt="drawing" style="width:275px;"/>
 
 
 Now, the bars are all next to each other, and
@@ -1371,7 +1278,7 @@ ggplot(mtcars, aes(cyl, fill = gearfactor)) + geom_bar(position = "fill")
 The output we get is as follows:
 
 
-![](./images/6beaf172-558c-4db7-97ea-6840a123ea2a.png)
+<img src="./images/6beaf172-558c-4db7-97ea-6840a123ea2a.png" alt="drawing" style="width:275px;"/>
 
 
 While the [*x*]-axis still says
@@ -1418,14 +1325,14 @@ ggplot(msleep, aes(vore, fill = conservation)) + geom_bar(position = "fill")
 1*]:
 
 
-![](./images/4289f7df-85dc-48b3-8729-e32b49928fcb.png)
+<img src="./images/4289f7df-85dc-48b3-8729-e32b49928fcb.png" alt="drawing" style="width:275px;"/>
 
 
 The following is the output we get when we
-execute the code mentioned in [*Step 2*]:
+execute the code mentioned in *Step 2*:
 
 
-![](./images/bf4e5204-3134-48a3-9d19-a4fec467f27c.png)
+<img src="./images/bf4e5204-3134-48a3-9d19-a4fec467f27c.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -1463,7 +1370,7 @@ ggplot(mtcars, aes(cylfactor)) + geom_bar() + facet_wrap(~gear)
 
 
 
-![](./images/e3ef2294-4e65-4e15-a7f6-fc5998fb1aa0.png)
+<img src="./images/e3ef2294-4e65-4e15-a7f6-fc5998fb1aa0.png" alt="drawing" style="width:275px;"/>
 
 
 However, if you move gear to the row place,
@@ -1478,7 +1385,7 @@ ggplot(mtcars, aes(cylfactor)) + geom_bar() + facet_grid(gear~)
 Thus, the output we get will be as follows:
 
 
-![](./images/72ed3e6f-7e05-4d66-8a27-c4d4e616248d.png)
+<img src="./images/72ed3e6f-7e05-4d66-8a27-c4d4e616248d.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -1521,14 +1428,14 @@ ggplot(msleep, aes(conservation)) + geom_bar() + facet_grid(vore~)
 **Output**: The following is the output we get when we execute the code in [*Step 1*]:
 
 
-![](./images/6fe641c0-3b6b-4577-875e-b4bda58d747a.png)
+<img src="./images/6fe641c0-3b6b-4577-875e-b4bda58d747a.png" alt="drawing" style="width:275px;"/>
 
 
 The following is the output we get when
-we execute the code in [*Step 2*]:
+we execute the code in *Step 2*:
 
 
-![](./images/f833b0b9-feab-4cb5-8cbf-b5045e6cfcf5.png)
+<img src="./images/f833b0b9-feab-4cb5-8cbf-b5045e6cfcf5.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -1556,7 +1463,7 @@ The output we get will be as shown in the
 following screenshot:
 
 
-![](./images/1f938ab7-8909-44d4-b3eb-fa7c13101f98.png)
+<img src="./images/1f938ab7-8909-44d4-b3eb-fa7c13101f98.png" alt="drawing" style="width:275px;"/>
 
 
 We see that `cylfactor` is now on the [*y*]-axis
@@ -1609,7 +1516,7 @@ ggplot(mtcars, aes(wt, mpg)) + geom_point(shape = 17)
 The output we get is as follows:
 
 
-![](./images/b5c8ceae-8e69-43a2-92c2-b692359b2dfc.png)
+<img src="./images/b5c8ceae-8e69-43a2-92c2-b692359b2dfc.png" alt="drawing" style="width:275px;"/>
 
 
 However, these are very tiny. Let\'s make them bigger with the size
@@ -1679,17 +1586,17 @@ ggplot(msleep2, aes(brainwt, bodywt)) + geom_point(shape = 17, size = 6)
 
 
 **Output**: The following is the output we get after
-executing the code mentioned in [*Step 2*]:
+executing the code mentioned in *Step 2*:
 
 
-![](./images/950b5976-4de2-4244-932d-8661b90f79d0.png)
+<img src="./images/950b5976-4de2-4244-932d-8661b90f79d0.png" alt="drawing" style="width:275px;"/>
 
 
 The following is the output we get after executing the code mentioned in
 [*Step 3*]:
 
 
-![](./images/a035eb9e-d09e-4ec4-b83d-32c6448ebb67.png)
+<img src="./images/a035eb9e-d09e-4ec4-b83d-32c6448ebb67.png" alt="drawing" style="width:275px;"/>
 
 
 We\'ve covered some global and local
@@ -1712,7 +1619,7 @@ datasets for a presentation for your colleague, as shown in the
 following screenshot:
 
 
-![](./images/16c77ec8-3ac8-40e3-995c-3a330e745d73.png)
+<img src="./images/16c77ec8-3ac8-40e3-995c-3a330e745d73.png" alt="drawing" style="width:275px;"/>
 
 
 **Aim**
@@ -1738,13 +1645,13 @@ package should also be installed.
 
 
 
-![](./images/23379d4c-b1b3-4c86-a343-2ef0dc11e7e5.png)
+<img src="./images/23379d4c-b1b3-4c86-a343-2ef0dc11e7e5.png" alt="drawing" style="width:275px;"/>
 
 
  
 
 
-![](./images/42514397-bb14-4ad7-9007-fb0b6de77996.png)
+<img src="./images/42514397-bb14-4ad7-9007-fb0b6de77996.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -1754,11 +1661,11 @@ package should also be installed.
 
 
 
-![](./images/21e495a4-479f-44bb-84d7-854e937e70aa.png)
+<img src="./images/21e495a4-479f-44bb-84d7-854e937e70aa.png" alt="drawing" style="width:275px;"/>
 
 
 
-![](./images/d0850b9f-d426-401f-a101-9bc78a8652e9.png)
+<img src="./images/d0850b9f-d426-401f-a101-9bc78a8652e9.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -1819,7 +1726,7 @@ The other themes available are as follows:
 
 
 
-![](./images/92d447b7-d946-46a1-8884-147657223358.png)
+<img src="./images/92d447b7-d946-46a1-8884-147657223358.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -1829,7 +1736,7 @@ The other themes available are as follows:
 
 
 
-![](./images/feb02214-56ae-481f-8b8c-f7bae9b622d6.png)
+<img src="./images/feb02214-56ae-481f-8b8c-f7bae9b622d6.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -1838,7 +1745,7 @@ The other themes available are as follows:
 
 
 
-![](./images/167833b2-b12e-41e2-9d12-8967e6bc8cee.png)
+<img src="./images/167833b2-b12e-41e2-9d12-8967e6bc8cee.png" alt="drawing" style="width:275px;"/>
 
 
 These are just a few theme examples. There are more listed in the
@@ -1882,7 +1789,7 @@ labs(title = "dist vs. speed",
 The output of the preceding code will be as follows:
 
 
-![](./images/6c71fb09-8bdf-4e51-83b5-eaf80ec58f9b.png)
+<img src="./images/6c71fb09-8bdf-4e51-83b5-eaf80ec58f9b.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -1902,7 +1809,7 @@ ggtitle("dist vs. speed",
 The output of the preceding code will be as follows:
 
 
-![](./images/6c71fb09-8bdf-4e51-83b5-eaf80ec58f9b.png)
+<img src="./images/6c71fb09-8bdf-4e51-83b5-eaf80ec58f9b.png" alt="drawing" style="width:275px;"/>
 
 
 
@@ -1919,7 +1826,7 @@ ggplot(diamonds, aes(carat, price, col = cut)) + geom_point(alpha = 0.4) + theme
 The output of the preceding code will be as follows:
 
 
-![](./images/e87f176a-4f3c-45a4-8d47-4ef84fc4817c.png)
+<img src="./images/e87f176a-4f3c-45a4-8d47-4ef84fc4817c.png" alt="drawing" style="width:275px;"/>
 
 
 
