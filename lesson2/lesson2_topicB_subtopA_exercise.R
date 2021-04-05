@@ -1,5 +1,7 @@
 #tested and working
-install.packages("ggplot2")
+
+#uncomment below line if package is not installed
+#install.packages("ggplot2")
 library(ggplot2)
 
 data("msleep")

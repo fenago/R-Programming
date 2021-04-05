@@ -34,7 +34,9 @@ all_equal(iris, iris_back_2)
 ## COMBINING DATA 
 
 #install & load ggplot2
-install.packages("ggplot2")
+
+#uncomment below line if package is not installed
+#install.packages("ggplot2")
 library(ggplot2)
 
 #load midwest and examine with str()
@@ -76,7 +78,9 @@ class(all3)
 ## SPLITTING STRINGS
 
 #install and load stringr
-install.packages("stringr")
+
+#uncomment below line if package is not installed
+#install.packages("stringr")
 library(stringr)
 
 #create the names vector & check its length

@@ -11,7 +11,9 @@ students_csv1 <- read.table("https://raw.githubusercontent.com/fenago/R-Programm
 students_csv2 <- read.csv("https://raw.githubusercontent.com/fenago/R-Programming/master/lesson1/students.csv")
 
 #with read_csv
-install.packages("readr")
+
+#uncomment below line if package is not installed
+#install.packages("readr")
 library(readr)
 
 students_csv3 <- read_csv("https://raw.githubusercontent.com/fenago/R-Programming/master/lesson1/students.csv")
@@ -24,7 +26,9 @@ str(students_csv3)
 
 #part 2:
 #install & load xlsx
- install.packages("openxlsx")
+ 
+#uncomment below line if package is not installed
+#install.packages("openxlsx")
 library(openxlsx)
 
 #import excel

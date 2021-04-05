@@ -1,7 +1,9 @@
 #tested and working
 #load the datasets library
 library(datasets)
-install.packages("ggplot2")
+
+#uncomment below line if package is not installed
+#install.packages("ggplot2")
 library(ggplot2)
 #load the data
 data("iris")

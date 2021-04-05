@@ -2,11 +2,15 @@
 #all code comes from the dplyr introduction vignette, found here: https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html
 
 #install and load dplyr
-install.packages("dplyr")
+
+#uncomment below line if package is not installed
+#install.packages("dplyr")
 library(dplyr)
 
 #install the data package
-install.packages("nycflights13")
+
+#uncomment below line if package is not installed
+#install.packages("nycflights13")
 
 library(nycflights13)
 dim(flights)

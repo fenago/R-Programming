@@ -1,6 +1,8 @@
 #tested and working
 #split/unsplit
-install.packages("datasets")
+
+#uncomment below line if package is not installed
+#install.packages("datasets")
 library(datasets)
 data("mtcars")
 

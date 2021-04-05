@@ -1,6 +1,8 @@
 #tested and working
 #install and load readr
-install.packages("readr")
+
+#uncomment below line if package is not installed
+#install.packages("readr")
 library(readr)
 
 #load in students and students 2 from github
@@ -19,7 +21,9 @@ students_combined2 <- merge(students, students2, by = "ID", all.y = TRUE)
 dim(students_combined2)
 
 #join
-install.packages("dplyr")
+
+#uncomment below line if package is not installed
+#install.packages("dplyr")
 library(dplyr)
 
 #right join

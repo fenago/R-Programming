@@ -1,6 +1,8 @@
 #tested and working
 #load the tidyverse packages
-install.packages("tidyverse")
+
+#uncomment below line if package is not installed
+#install.packages("tidyverse")
 
 #load ggplot2
 library(ggplot2)
