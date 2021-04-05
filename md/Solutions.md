@@ -65,9 +65,7 @@ The following are the activity solutions for this lab.
 
 5.  Save this R script with the name `install_packages`. You
     can save R scripts by either navigating
-    to **`File`** \| **`Save As`** or by
-    hitting [*Ctrl*] + [*S*] (or [*cmd*] + [*S*],
-    on a macOS). It is now saved in your working directory
+    to **`File`** \| **`Save As`** . It is now saved in your working directory
     as `install_packages.R`.
 6.  Load the `ggplot2` package with the
     code `library(ggplot2)`. `ggplot2` is a package

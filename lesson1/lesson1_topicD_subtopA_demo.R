@@ -12,8 +12,8 @@ students_text <- read.table("https://raw.githubusercontent.com/fenago/R-Programm
 #open students_text again to be sure!
 
 #create new variable
-students_text$Height_cm <- (students$Height_inches * 2.54)
-students_text$Weight_kg <- (students$Weight_lbs * 0.453592)
+students_text$Height_cm <- (students_text$Height_inches * 2.54)
+students_text$Weight_kg <- (students_text$Weight_lbs * 0.453592)
 
 #.txt file
 write.table(students_text, "students_text_out.txt")

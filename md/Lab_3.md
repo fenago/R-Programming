@@ -191,7 +191,7 @@ another variable, as follows:
 
 
 ``` 
-mtcars$cyl &lt;- as.factor(mtcars$cyl)
+mtcars$cyl <- as.factor(mtcars$cyl)
 ```
 
 
@@ -201,7 +201,7 @@ mtcars$cyl &lt;- as.factor(mtcars$cyl)
 
 
 ``` 
-mtcars$cyl2 &lt;- as.factor(mtcars$cyl)
+mtcars$cyl2 <- as.factor(mtcars$cyl)
 ```
 
 
@@ -223,8 +223,8 @@ categorical and should be transformed to factors. A good way to do this
 is by using the following code:
 
 ``` 
-factors &lt;- c("cyl", "am", "gear") 
-mtcars[,factors] &lt;- data.frame(apply(mtcars[,factors], 2, as.factor))
+factors <- c("cyl", "am", "gear") 
+mtcars[,factors] <- data.frame(apply(mtcars[,factors], 2, as.factor))
 ```
 
 
@@ -281,7 +281,7 @@ str(midwest)
 
 
 ``` 
-midwest$state &lt;- as.factor(midwest$state)
+midwest$state <- as.factor(midwest$state)
 ```
 
 
@@ -302,7 +302,7 @@ str(band_instruments)
 
 
 ``` 
-band_instruments &lt;- data.frame(apply(band_instruments, 2, as.factor))
+band_instruments <- data.frame(apply(band_instruments, 2, as.factor))
 ```
 
 
@@ -390,7 +390,7 @@ The following code will change the
 representation of the three species to numbers:
 
 ``` 
-iris$Species2 &lt;- ifelse(iris$Species == "setosa", 1,
+iris$Species2 <- ifelse(iris$Species == "setosa", 1,
 ifelse(iris$Species == "versicolor", 2, 3))
 ```
 
@@ -434,7 +434,7 @@ package, can change the level of the factor by using more readable code, as foll
 
 ``` 
 library(dplyr)
-iris$Species3 &lt;- recode(iris$Species,
+iris$Species3 <- recode(iris$Species,
                         "setosa" = 1,
                         "versicolor" = 2,
                         "virginica" = 3)
@@ -473,7 +473,7 @@ levels(band_instruments$plays)
 
 
 ``` 
-band_instruments$plays2 &lt;- ifelse(band_instruments$plays == "bass", 1,
+band_instruments$plays2 <- ifelse(band_instruments$plays == "bass", 1,
 ifelse(band_instruments$plays == "guitar", 2, band_instruments$plays))
 ```
 
@@ -496,7 +496,7 @@ levels(midwest$state)
 
 ``` 
 library(dplyr)
-midwest$state2 &lt;- recode(midwest$state,
+midwest$state2 <- recode(midwest$state,
                          "IL" = "Illinois",
                          "IN" = "Indiana",
                          "MI" = "Michigan",
@@ -527,9 +527,9 @@ need to set this variable as a factor. When we do so, the code will be
 as follows:
 
 ``` 
-speed &lt;- rep(c("low", "medium", "high"), times = 11)
-speed &lt;- speed[-1]
-mtcars$speed &lt;- factor(speed, levels = c("low", "medium", "high"), ordered = TRUE)
+speed <- rep(c("low", "medium", "high"), times = 11)
+speed <- speed[-1]
+mtcars$speed <- factor(speed, levels = c("low", "medium", "high"), ordered = TRUE)
 ```
 
 
@@ -560,8 +560,8 @@ executed:
 
 
 ``` 
-gas_price &lt;- rep(c("low", "medium", "high"), times = 146)
-gas_price &lt;- gas_price[-1]
+gas_price <- rep(c("low", "medium", "high"), times = 146)
+gas_price <- gas_price[-1]
 ```
 
 
@@ -574,7 +574,7 @@ average.
 
 
 ``` 
-midwest$gas_price &lt;- factor(gas_price,
+midwest$gas_price <- factor(gas_price,
                                 levels = c("low", "medium", "high"),
                                 ordered = TRUE)
 ```
@@ -864,7 +864,7 @@ summarize data. One example of the use of the `apply()`
 function would be the following:
 
 ``` 
-numbers &lt;- rbind(c(1:5), c(2:6)) apply(numbers, 2, mean)
+numbers <- rbind(c(1:5), c(2:6)) apply(numbers, 2, mean)
 ```
 
 
@@ -1055,7 +1055,7 @@ data(iris)
 
 
 ``` 
-iris_species &lt;- split(iris, iris$Species) 
+iris_species <- split(iris, iris$Species) 
 typeof(iris_species) 
 class(iris_species[[1]]) 
 ```
@@ -1078,9 +1078,9 @@ head(iris_species[[2]])
 
 
 ``` 
-iris_setosa &lt;- iris_species[[1]] 
-iris_versicolor &lt;- iris_species[[2]] 
-iris_virginica &lt;- iris_species[[3]]
+iris_setosa <- iris_species[[1]] 
+iris_versicolor <- iris_species[[2]] 
+iris_virginica <- iris_species[[3]]
 ```
 
 
@@ -1094,7 +1094,7 @@ iris_virginica &lt;- iris_species[[3]]
 
 
 ``` 
-iris_back &lt;- unsplit(iris_species, iris$Species) 
+iris_back <- unsplit(iris_species, iris$Species) 
 library(dplyr) 
 all_equal(iris, iris_back)
 ```
@@ -1110,9 +1110,9 @@ all_equal(iris, iris_back)
 
 
 ``` 
-iris_setosa_2 &lt;- iris %&gt;% filter(Species == "setosa") 
-iris_versicolor_2 &lt;- iris %&gt;% filter(Species == "versicolor") 
-iris_virginica_2 &lt;- iris %&gt;% filter(Species == "virginica")
+iris_setosa_2 <- iris %&gt;% filter(Species == "setosa") 
+iris_versicolor_2 <- iris %&gt;% filter(Species == "versicolor") 
+iris_virginica_2 <- iris %&gt;% filter(Species == "virginica")
 ```
 
 
@@ -1123,7 +1123,7 @@ iris_virginica_2 &lt;- iris %&gt;% filter(Species == "virginica")
 
 
 ``` 
-iris_back_2 &lt;- rbind.data.frame(iris_setosa_2, iris_versicolor_2, iris_virginica_2) 
+iris_back_2 <- rbind.data.frame(iris_setosa_2, iris_versicolor_2, iris_virginica_2) 
 all_equal(iris, iris_back_2)
 ```
 
@@ -1154,19 +1154,6 @@ the seventh step:
 
 ![](./images/578cca38-056b-46b3-adb7-aefe40cf94a4.png)
 
-
-
-
-#### Combining Data
-
-
-
-`rbind()` and `cbind()` are two major combining functions you can use in R. We just used the
-`rbind.data.frame()` function to recombine the iris datasets,
-and you may recall that we covered both of these functions in [*Lab
-1*], [*Introduction to R*], in detail. As a
-reminder, they combine data by row and column, respectively. As a quick
-review, let\'s combine some data in the next section.
 
 
 
@@ -1206,9 +1193,8 @@ install.packages("ggplot2") library(ggplot2)
 
 
 ``` 
-midwest1 &lt;- midwest[1:round(nrow(midwest)/2),] 
-midwest2 &lt;- 
-midwest[(round(nrow(midwest)/2)+1):nrow(midwest),]
+midwest1 <- midwest[1:round(nrow(midwest)/2), ]
+midwest2 <- midwest[(round(nrow(midwest)/2)+1):nrow(midwest), ]
 ```
 
 
@@ -1219,7 +1205,7 @@ midwest[(round(nrow(midwest)/2)+1):nrow(midwest),]
 
 
 ``` 
-midwest_back &lt;- rbind(midwest1, midwest2)
+midwest_back <- rbind(midwest1, midwest2)
 ```
 
 
@@ -1263,10 +1249,10 @@ steps have to be executed:
 
 
 ``` 
-one &lt;- 1:15 
-two &lt;- 16:30 
-three &lt;- 31:45 
-four &lt;- 46:60 
+one <- 1:15 
+two <- 16:30 
+three <- 31:45 
+four <- 46:60 
 ```
 
 
@@ -1277,8 +1263,8 @@ four &lt;- 46:60
 
 
 ``` 
-all1 &lt;- rbind(one, two, three, four) 
-all2 &lt;- cbind(one, two, three, four) 
+all1 <- rbind(one, two, three, four) 
+all2 <- cbind(one, two, three, four) 
 ```
 
 
@@ -1297,8 +1283,8 @@ class(all1)
 
 
 ``` 
-all3 &lt;- rbind.data.frame(one, two, three, four) 
-all4 &lt;- cbind.data.frame(one, two, three, four) 
+all3 <- rbind.data.frame(one, two, three, four) 
+all4 <- cbind.data.frame(one, two, three, four) 
 class(all3)
 ```
 
@@ -1341,7 +1327,7 @@ install.packages("stringr") library(stringr)
 
 
 ``` 
-names &lt;- c("Danelle Lewison", "Reyna Wieczorek", "Jaques Sola", "Marcus Huling", "Elvis Driver", "Chandra Picone", "Alejandro Caffey", "Shawnna Lomato", "Masako Hice", "Wally Ota", "Phillip Batten", "Denae Rizzuto", "Joseph Merlos", "Maurice Debelak", "Carina Gunning", "Tama Moody") length(names) 
+names <- c("Danelle Lewison", "Reyna Wieczorek", "Jaques Sola", "Marcus Huling", "Elvis Driver", "Chandra Picone", "Alejandro Caffey", "Shawnna Lomato", "Masako Hice", "Wally Ota", "Phillip Batten", "Denae Rizzuto", "Joseph Merlos", "Maurice Debelak", "Carina Gunning", "Tama Moody") length(names) 
 ```
 
 
@@ -1353,7 +1339,7 @@ names &lt;- c("Danelle Lewison", "Reyna Wieczorek", "Jaques Sola", "Marcus Hulin
 
 
 ``` 
-names_split &lt;- str_split(names, pattern = " ") 
+names_split <- str_split(names, pattern = " ") 
 ```
 
 
@@ -1377,7 +1363,7 @@ names_split[[1]][1]
 
 
 ``` 
-names_split_a &lt;- str_split(names, pattern = "a") 
+names_split_a <- str_split(names, pattern = "a") 
 ```
 
 
@@ -1438,7 +1424,7 @@ the following steps have to be executed:
 
 
 ``` 
-a &lt;- "R" b &lt;- "is" c &lt;- "fun" 
+a <- "R" b <- "is" c <- "fun" 
 ```
 
 
@@ -1567,9 +1553,9 @@ install.packages("readr") library(readr)
 
 
 ``` 
-students &lt;- read_csv("https://raw.githubusercontent.com/ 
+students <- read_csv("https://raw.githubusercontent.com/ 
 fenago/R-Programming/master/lesson3/students.csv") 
-students2 &lt;- read_csv("https://raw.githubusercontent.com/ 
+students2 <- read_csv("https://raw.githubusercontent.com/ 
 fenago/R-Programming/master/lesson3/students2.csv")
 ```
 
@@ -1596,7 +1582,7 @@ str(students) str(students2)
 
 
 ``` 
-students_combined &lt;- merge(students, students2, by = "ID") dim(students_combined)
+students_combined <- merge(students, students2, by = "ID") dim(students_combined)
 ```
 
 
@@ -1610,7 +1596,7 @@ students_combined &lt;- merge(students, students2, by = "ID") dim(students_combi
 
 
 ``` 
-students_combined2 &lt;- merge(students, students2, by = "ID", all.y = TRUE) dim(students_combined2)
+students_combined2 <- merge(students, students2, by = "ID", all.y = TRUE) dim(students_combined2)
 ```
 
 
@@ -1638,7 +1624,7 @@ install.packages("dplyr") library(dplyr)
 
 
 ``` 
-students_right_join &lt;- right_join(students, students2, by = "ID") 
+students_right_join <- right_join(students, students2, by = "ID") 
 dim(students_right_join)
 ```
 
@@ -1650,7 +1636,7 @@ dim(students_right_join)
 
 
 ``` 
-students_anti_join &lt;- anti_join(students, students2, by = "ID") dim(students_anti_join)
+students_anti_join <- anti_join(students, students2, by = "ID") dim(students_anti_join)
 ```
 
 
@@ -1661,8 +1647,8 @@ students_anti_join &lt;- anti_join(students, students2, by = "ID") dim(students_
 
 
 ``` 
-students_merge_noby &lt;- merge(students, students2)
-students_join_noby &lt;- right_join(students, students2)
+students_merge_noby <- merge(students, students2)
+students_join_noby <- right_join(students, students2)
 ```
 
 
@@ -1674,9 +1660,9 @@ students_join_noby &lt;- right_join(students, students2)
 
 
 ``` 
-colnames(students)[6] &lt;- "StudentID"
-students_merge_diff &lt;- merge(students, students2, by.x = "StudentID", by.y = "ID")
-students_join_diff &lt;- right_join(students, students2, by = c("StudentID" = "ID"))
+colnames(students)[6] <- "StudentID"
+students_merge_diff <- merge(students, students2, by.x = "StudentID", by.y = "ID")
+students_join_diff <- right_join(students, students2, by = c("StudentID" = "ID"))
 ```
 
 

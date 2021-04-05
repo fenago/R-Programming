@@ -175,7 +175,7 @@ plots, which help you determine whether your model fits well. The
 following code demonstrates this:
 
 ``` 
-mtcars_lm &lt;- lm(mpg ~ wt, data = mtcars)
+mtcars_lm <- lm(mpg ~ wt, data = mtcars)
 plot(mtcars_lm)
 ```
 
@@ -239,7 +239,7 @@ examine the model diagnostics. Follow the steps given below:
 
 
 ``` 
-mtcars_lm &lt;- lm(mpg ~ disp + wt, data = mtcars)
+mtcars_lm <- lm(mpg ~ disp + wt, data = mtcars)
 ```
 
 
@@ -566,45 +566,6 @@ if you\'re like most data scientists out there.
 Using ggplot2 requires you to begin to think of each element of a plot
 as a layer.
 
-First, you have a white screen with only axes defined, two lines
-symbolizing the [*x*] and [*y*] axes. Using the
-`ggplot()` function, you layer on a dataset that contains what
-you\'ll plot and the aesthetics of the plot, defined in the
-`aes()` function, which corresponds to the things to plot and
-how to plot them. Then, you layer on a geom, using a
-`geom_*()` function, which tells ggplot2 what kind of plot
-you\'re trying to make. You can layer on additional aesthetics, such as
-plot titles, axis labels, colors, different point types, and more.
-
-``` 
-ggplot(data = &lt;DATA&gt;) + &lt;GEOM_FUNCTION&gt;(mapping = aes(&lt;MAPPINGS&gt;))
-```
-
-
-In the call, we see the three things required by all ggplots:
-
-
-1.  Dataset (`DATA`)
-2.  Geom (`GEOM_FUNCTION`)
-3.  Mappings (`MAPPINGS`)
-
-
-Your dataset, entered in `DATA`, will be the dataset you\'re
-looking to plot variables from. Geoms take the form of
-`geom_*()`, where the `*` will be the name of the
-type of plot you\'re looking to create, for example
-`geom_point()`for a scatterplot, `geom_ boxplot()`
-for a boxplot, and `geom_histogram()` for a histogram (perhaps
-you\'re detecting a theme here in how the `geom_*()` functions
-are named!)
-
-Mappings are the variables you want to graph plus other aesthetics
-(`aes()` is short for aesthetics)
-
-``` 
-ggplot(data = &lt;DATA&gt;, aes(&lt;GLOBAL MAPPINGS&gt;)) + &lt;GEOM_FUNCTION&gt;(mapping = aes(&lt;LOCAL MAPPINGS&gt;))
-```
-
 
 There are a few things you should know about creating ggplots that will
 help you along the way. Firstly, you can save a ggplot call and use it
@@ -612,7 +573,7 @@ for multiple graphs, for example:
 
 ``` 
 #save the ggplot data and mappings as 'mtcars_ggplot':
-mtcars_ggplot &lt;- ggplot(mtcars, aes(wt, mpg))
+mtcars_ggplot <- ggplot(mtcars, aes(wt, mpg))
 #create 2 additional plots:
 mtcars_ggplot + geom_point()
 mtcars_ggplot + geom_point(aes(col = factor(cyl)))
@@ -1191,8 +1152,8 @@ convert the `cyl` and `gear` variables in
 `mtcars` to factor variables using the following code:
 
 ``` 
-mtcars$cylfactor &lt;- as.factor(mtcars$cyl)
-mtcars$gearfactor &lt;- as.factor(mtcars$gear)
+mtcars$cylfactor <- as.factor(mtcars$cyl)
+mtcars$gearfactor <- as.factor(mtcars$gear)
 ```
 
 
@@ -1523,7 +1484,9 @@ Follow the steps given below:
 
 
 ``` 
-library(dplyr) msleep2 &lt;- msleep %&gt;% filter(bodywt &lt; 2000)
+#scatterplots
+library(dplyr)
+msleep2 <- msleep %>% filter(bodywt < 2000)
 ```
 
 

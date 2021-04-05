@@ -162,7 +162,7 @@ Custom functions are fairly straightforward to create in R. Generally,
 they should be created using the following syntax:
 
 ``` 
-name_of_function &lt;- function(input1, input2){
+name_of_function <- function(input1, input2){
 operation to be performed with the inputs
 }
 ```
@@ -171,7 +171,7 @@ operation to be performed with the inputs
 The example custom function is as follows:
 
 ``` 
-area_triangle &lt;- function(base, height){
+area_triangle <- function(base, height){
 0.5 * base * height
 }
 ```
@@ -224,7 +224,7 @@ given below:
 
 
 ``` 
-area_rectangle &lt;- function(length, width){
+area_rectangle <- function(length, width){
 length * width
 }
 ```
@@ -398,7 +398,7 @@ type. You can look at the class or type of anything in R using the
 `class()` and `typeof()` functions, respectively. Let\'s examine the following code snippet:
 
 ``` 
-x &lt;- 4.2
+x <- 4.2
 class(x)
 typeof(x)
 ```
@@ -438,9 +438,9 @@ given below:
 
 
 ``` 
-x &lt;- 12.7
-y &lt;- 8L
-z &lt;- 950
+x <- 12.7
+y <- 8L
+z <- 950
 ```
 
 
@@ -481,9 +481,9 @@ steps given below:
 
 
 ``` 
-a &lt;- "apple"
-b &lt;- "7"
-c &lt;- "9-5-2016"
+a <- "apple"
+b <- "7"
+c <- "9-5-2016"
 ```
 
 
@@ -528,8 +528,8 @@ Let\'s create and check the `class()` and
 
 
 ``` 
-e &lt;- as.Date("2016-09-05")
-f &lt;- as.POSIXct("2018-04-05")
+e <- as.Date("2016-09-05")
+f <- as.POSIXct("2018-04-05")
 ```
 
 
@@ -562,13 +562,13 @@ character string, we can cast it to numeric data type using
 
 ``` 
 #char to numeric, integer
-var &lt;- "5"
+var <- "5"
 
-var_num &lt;- as.numeric(var)
+var_num <- as.numeric(var)
 class(var_num)
 typeof(var_num)
 
-var_int &lt;- as.integer(var)
+var_int <- as.integer(var)
 class(var_int)
 typeof(var_int).
 ```
@@ -581,15 +581,15 @@ this:
 
 ``` 
 #numeric, integer to char
-var &lt;- 5
+var <- 5
 
 #numeric to char
-var_char &lt;- as.character(var_num)
+var_char <- as.character(var_num)
 class(var_char)
 typeof(var_char)
 
 #int to char
-var_char2 &lt;- as.character(var_int)
+var_char2 <- as.character(var_int)
 class(var_char2)
 typeof(var_char2)
 ```
@@ -602,8 +602,8 @@ code:
 
 ``` 
 #char to date
-date &lt;- "18-03-29"
-Date &lt;- as.Date(date)
+date <- "18-03-29"
+Date <- as.Date(date)
 class(Date)
 typeof(Date)
 ```
@@ -614,7 +614,7 @@ for them to save correctly. For example, the following code will not
 work:
 
 ``` 
-date2 &lt;- as.Date("03-29-18")
+date2 <- as.Date("03-29-18")
 ```
 
 
@@ -673,7 +673,7 @@ everything inside of a vector must all belong to the same variable type.
 You can create a vector using the method `c()`, for example:
 
 ``` 
- vector_example &lt;- c(1, 2, 3, 4)
+ vector_example <- c(1, 2, 3, 4)
 ```
 
 
@@ -690,7 +690,7 @@ vector is a `character` because of the `B` in
 position 2:
 
 ``` 
-vector_example_2 &lt;- c(1, "B", 3)
+vector_example_2 <- c(1, "B", 3)
 class(vector_example_2)
 ```
 
@@ -712,8 +712,8 @@ Follow the steps given below:
 
 
 ``` 
-twenty &lt;- c(1:20)
-alphabet &lt;- c(letters)
+twenty <- c(1:20)
+alphabet <- c(letters)
 ```
 
 
@@ -760,8 +760,8 @@ alphabet[33]
 be as follows:
 
 ``` 
-twenty &lt;- c(1:20)
-alphabet &lt;- c(letters)
+twenty <- c(1:20)
+alphabet <- c(letters)
 class(twenty)
 typeof(twenty)
 class(alphabet)
@@ -795,7 +795,7 @@ in R using the `list()` function, as shown in the following
 example:
 
 ``` 
-L1 &lt;- list(1, "2", "Hello", "cat", 12, list(1, 2, 3))
+L1 <- list(1, "2", "Hello", "cat", 12, list(1, 2, 3))
 ```
 
 
@@ -816,9 +816,9 @@ nested list, will not coerce to a vector. The following code
 demonstrates this:
 
 ``` 
-L1_df &lt;- as.data.frame(L1)
+L1_df <- as.data.frame(L1)
 class(L1_df)
-L1_vec &lt;- as.vector(L1)
+L1_vec <- as.vector(L1)
 class(L1_vec)
 ```
 
@@ -847,7 +847,7 @@ methods. Follow the steps given below:
 
 
 ``` 
-matrix1 &lt;- matrix(c(1:12), nrow = 3, ncol = 3, byrow = FALSE)
+matrix1 <- matrix(c(1:12), nrow = 3, ncol = 3, byrow = FALSE)
 ```
 
 
@@ -857,7 +857,7 @@ matrix1 &lt;- matrix(c(1:12), nrow = 3, ncol = 3, byrow = FALSE)
 
 
 ``` 
-matrix2 &lt;- matrix(c(1:12), nrow = 3, ncol = 3, byrow = TRUE) 
+matrix2 <- matrix(c(1:12), nrow = 3, ncol = 3, byrow = TRUE) 
 ```
 
 
@@ -867,7 +867,7 @@ matrix2 &lt;- matrix(c(1:12), nrow = 3, ncol = 3, byrow = TRUE)
 
 
 ``` 
-rownames(matrix1) &lt;- c("one", "two", "three") colnames(matrix1) &lt;- c("one", "two", "three")
+rownames(matrix1) <- c("one", "two", "three") colnames(matrix1) <- c("one", "two", "three")
 ```
 
 
@@ -902,8 +902,8 @@ Here\'s an example where we can create a list of nested lists and turn
 it into a data frame:
 
 ``` 
-list_for_df &lt;- list(list(1:3), list(4:6), list(7:9))
-example_df &lt;- as.data.frame(list_for_df)
+list_for_df <- list(list(1:3), list(4:6), list(7:9))
+example_df <- as.data.frame(list_for_df)
 ```
 
 
@@ -913,7 +913,7 @@ common practice in R to set the row names for most analyses. It can be
 demonstrated by the following code:
 
 ``` 
-colnames(example_df) &lt;- c("one", "two", "three")
+colnames(example_df) <- c("one", "two", "three")
 ```
 
 
@@ -1026,7 +1026,7 @@ some_action
 
 
 Here, the action only occurs if the `test_condition` evaluates
-to `TRUE`, so, for example, if you wrote `4 &lt; 5`,
+to `TRUE`, so, for example, if you wrote `4 < 5`,
 the code in the curly braces would definitely run.
 
 If there\'s something you want to happen, even if the test condition
@@ -1062,7 +1062,7 @@ Let\'s do some actual examples to help illustrate these points. Take a
 look at the following code:
 
 ``` 
-var &lt;- "Hello"
+var <- "Hello"
 if(class(var) == "character"){
 print("Your variable is a character string.")
 }
@@ -1070,7 +1070,7 @@ print("Your variable is a character string.")
 
 
 What output would you expect here? What output would you expect if the
-variable was assigned the value `var &lt;- 5` instead? When
+variable was assigned the value `var <- 5` instead? When
 `var` is \"Hello\", the `if` statement is
 `TRUE`, and \"Your variable is a character string\" will print
 to the console. However, when `var` is 5, nothing happens,
@@ -1080,7 +1080,7 @@ With the following code, when `var` is 5, something will
 print:
 
 ``` 
-var &lt;- 5
+var <- 5
 if(class(var) == "character"){
 print("Your variable is a character string.")
 }else{
@@ -1276,7 +1276,7 @@ numbers, such as the following:
 
 ``` 
 i = 0
-while(i &lt;= 5){
+while(i <= 5){
     print(paste("loop", i))
     i = i + 1
 }
@@ -1332,7 +1332,7 @@ never run. For example, if we forgot that `i` is in our global
 environment, and that it equals 5, the following loop will never run:
 
 ``` 
-while(i &lt; 5){
+while(i < 5){
     print(paste(i, "is this number"))
     i = i + 1
 }
@@ -1348,7 +1348,7 @@ predict what the loop code will print. Follow the steps below:
 
 
 ``` 
-vec &lt;- seq(1:10)
+vec <- seq(1:10)
 for(num in seq_along(vec)){
     if(num %% 2 == 0){
         print(paste(num, "is even"))
@@ -1365,7 +1365,7 @@ for(num in seq_along(vec)){
 
 
 ``` 
-example &lt;- data.frame(color = c("red", "blue", "green"), number = c(1, 2, 3))
+example <- data.frame(color = c("red", "blue", "green"), number = c(1, 2, 3))
 for(i in seq(nrow(example))){
 print(example[i,1])
 }
@@ -1378,7 +1378,7 @@ print(example[i,1])
 
 
 ``` 
-var &lt;- 5
+var <- 5
 while(var > 0){
     print(var)
     var = var - 1
@@ -1602,7 +1602,7 @@ is stored, the function will download it for you, as shown in the
 following example:
 
 ``` 
-students_text &lt;- read.table("https://raw.githubusercontent.com/fenago/R-Programming/master/lesson1/students.txt")
+students_text <- read.table("https://raw.githubusercontent.com/fenago/R-Programming/master/lesson1/students.txt")
 ```
 
 
@@ -1623,7 +1623,7 @@ first row---the variable names, and they should be read in as names.
 Here is the example:
 
 ``` 
-students_text &lt;- read.table("https://raw.githubusercontent.com/fenago/R-Programming/master/lesson1/students.txt",header = TRUE)
+students_text <- read.table("https://raw.githubusercontent.com/fenago/R-Programming/master/lesson1/students.txt",header = TRUE)
 ```
 
 
@@ -1635,8 +1635,8 @@ centimeters and the `Weight_ lbs` variable to kilograms. We
 can do so with the following code:
 
 ``` 
-students_text$Height_cm &lt;- (students_text$Height_inches * 2.54)
-students_text$Weight_kg &lt;- (students_text$Weight_lbs / 0.453592)
+students_text$Height_cm <- (students_text$Height_inches * 2.54)
+students_text$Weight_kg <- (students_text$Weight_lbs / 0.453592)
 ```
 
 
@@ -1655,18 +1655,6 @@ This will write out the `students_text` dataset we\'re using
 in R to a file called `students_text_out` in our working
 directory folder on our machine.
 
-There are additional options for `read.table()` that we could
-use as well. We can actually import a `.csv` file this way by
-setting the `sep` argument equal to a comma. We can skip rows
-with `skip = some number`, and add our own row names or column
-names by passing in a vector of either of those to the
-`row.names` or `col.names` argument.
-
-Most of the other data import and export functions in R work much like
-`read. table()` and `write.table()`. Let\'s import
-the students\' data from the `.csv` format, which can be done
-in three different ways,  using `read.table()`,
-`read.csv()`, and `read_csv()`.
 
 
 1.  Import the `students.csv` file from GitHub using
@@ -1675,7 +1663,7 @@ in three different ways,  using `read.table()`,
 
 
 ``` 
-students_csv1 &lt;-read.table("https://raw.githubusercontent.com/fenago/R-Programming/master/lesson1/students.csv", header = TRUE, sep = ",")
+students_csv1 <- read.table("https://raw.githubusercontent.com/fenago/R-Programming/master/lesson1/students.csv", header = TRUE, sep = ",")
 ```
 
 
@@ -1685,7 +1673,7 @@ students_csv1 &lt;-read.table("https://raw.githubusercontent.com/fenago/R-Progra
 
 
 ``` 
-students_csv2 &lt;- read.csv("https://raw.githubusercontent.com/fenago/R-Programming/master/lesson1/students.csv")
+students_csv2 <- read.csv("https://raw.githubusercontent.com/fenago/R-Programming/master/lesson1/students.csv")
 ```
 
 
@@ -1712,7 +1700,7 @@ library(readr)
 
 
 ``` 
-students_csv3 &lt;- read_csv("https://raw.githubusercontent.com/fenago/R-Programming/master/lesson1/students.csv")
+students_csv3 <- read_csv("https://raw.githubusercontent.com/fenago/R-Programming/master/lesson1/students.csv")
 ```
 
 
@@ -1817,7 +1805,7 @@ library(openxlsx)
 
 
 ``` 
-students_xlsx &lt;- read.xlsx("students.xlsx")
+students_xlsx <- read.xlsx("students.xlsx")
 ```
 
 
@@ -1827,7 +1815,7 @@ students_xlsx &lt;- read.xlsx("students.xlsx")
 
 
 ``` 
-students_xlsx$id &lt;- seq(1:nrow(students_xlsx))
+students_xlsx$id <- seq(1:nrow(students_xlsx))
 ```
 
 
