@@ -323,8 +323,7 @@ code mentioned in *Step 2*:
 ![](./images/beedd1a6-f26d-48e7-b086-6b2fb2034b70.png)
 
 
-The following is the output of the code mentioned in [*Step
-4*]:
+The following is the output of the code mentioned in *Step 4*:
 
 
 ![](./images/7dc67db4-4680-46f3-aa15-6abc9c05d66f.png)
@@ -506,15 +505,13 @@ midwest$state2 &lt;- recode(midwest$state,
 ```
 
 
-**Output**: The following is the output of the code mentioned in [*Step
-1*]:
+**Output**: The following is the output of the code mentioned in *Step 1*:
 
 
 ![](./images/d1013c9b-47cd-493b-9bca-0501bbfbb903.png)
 
 
-The following is the output of the code mentioned in [*Step
-3*]:
+The following is the output of the code mentioned in Step 3:
 
 
 ![](./images/04532113-f0f9-46fa-82e2-a491a6a36833.png)
@@ -713,7 +710,7 @@ The following is the output we get as we execute the code mentioned in *Step 2*:
 ![](./images/bb550297-273f-4352-86a0-c8bed8573b75.png)
 
 
-The following is part of the output (it\'s very long) we get as we execute the code mentioned in [*Step 3*]:
+The following is part of the output (it\'s very long) we get as we execute the code mentioned in *Step 3*:
 
 
 ![](./images/7d761134-1b54-4473-bdc9-8442dcfba004.png)
@@ -1484,7 +1481,7 @@ the code mentioned in *Step 2*:
 
 
 The following is the output we get upon
-executing the code mentioned in [*Step 3*]:
+executing the code mentioned in *Step 3*:
 
 
 ![](./images/f3101ca1-62ac-4de0-b363-ed174c6750d1.png)
@@ -1494,14 +1491,6 @@ The following is the output we get upon executing the code mentioned in *Step 4*
 
 
 ![](./images/d7e2244f-bbfa-4bc2-bebd-826dfa7c63bc.png)
-
-
-Splitting and combining both data and character strings are important
-skills for programming with R. Often, they\'ll be used as part of a
-workflow known as split-apply-combine, where you split a dataset as
-needed, apply various summaries and other functions to it, and then
-recombine the summarized data, now transformed and exactly how you need
-it. 
 
 
 

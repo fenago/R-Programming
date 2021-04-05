@@ -244,10 +244,7 @@ mtcars_lm &lt;- lm(mpg ~ disp + wt, data = mtcars)
 
 
 
-2.  Run the following code to enable plotting a [*[*2
-    × *]*][*2*] grid of plots so that
-    looking at model diagnostic plots is easier with the following
-    method:
+2.  Run the following code to enable plotting a 2 × 2 grid of plots so that looking at model diagnostic plots is easier with the following method:
 
 
 ``` 
@@ -261,20 +258,10 @@ par(mfrow = c(2, 2))
 
 
 
-**Note:**
-
-Be sure to turn the [*[*2 *]*]× [*2*]
-grid off. This will make the plot disappear, so be sure you\'re done
-looking at it before you run this line.
+4.  Turn the 2 × 2 grid off using dev.off()
 
 
-
-4.  Turn the [*[*2 × *]*][*2*] grid off
-    using `dev.off()`.
-
-
-**Output**: The following is the output we get when we execute the
-`plot()` function as mentioned in [*Step 3*].
+**Output**: The following is the output we get when we execute the `plot()` function as mentioned in *Step 3*.
 
 
 <img src="./images/8f6ce590-95aa-4439-9fcf-be1e659530df.png" alt="drawing" style="width:275px;"/>
@@ -348,8 +335,7 @@ execute the code line mentioned in *Step 2*:
 
 
 The following is the output we get when we
-execute the code mentioned in [*Step
-3*]:
+execute the code mentioned in Step 3:
 
 
 <img src="./images/7187c937-424f-444d-9504-bd1b7f2f2801.png" alt="drawing" style="width:275px;"/>
@@ -410,10 +396,8 @@ plot(iris$Petal.Length, iris$Petal.Width,
 **Output**:
 
 
-1.  Check your **`Plot`** window after executing the code in [*Step
-    1*] to be sure that the plot is now blue.
-2.  Check your **`Plot`** window after executing the code in [*Step
-    2*] to be sure that the plot is now yellow.
+1.  Check your **`Plot`** window after executing the code in *Step 1* to be sure that the plot is now blue.
+2.  Check your **`Plot`** window after executing the code in *Step 2* to be sure that the plot is now yellow.
 
 
 It is important to know and understand `plot()`, as base plots
@@ -480,9 +464,7 @@ base plot methods.
 
 
 1.  
-    c.  Scatterplots in [*[*1
-        × *]*][*2*] grids to plot petal
-        length and width with axis labels:
+    c.  Scatterplots in 1 × 2 grids to plot petal length and width with axis labels:
     
 
 
@@ -511,26 +493,11 @@ package in R. It can be installed on its own or comes as part of the
 `Tidyverse` set of packages.
 
 
-
-When you\'re using ggplot2, both as you\'re learning how to use it and
-even when you\'re more seasoned, the official RStudio ggplot2 cheat
-sheet will be a resource you may want to keep
-close for your reference. It will not only remind you of the basics (and
-more advanced implementations) of how to use ggplot2, it gives
-suggestions for which plots to use when you have certain types of
-variables (for example, if you have one continuous variable, you can
-build a histogram using `geom_hist()`).
-
-
 **Note:**
 
 The ggplot2 cheat sheet can be found at the following URL:
 <https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf>. 
 
-
-RStudio has also made many different cheat sheets available for common R
-packages. They can be found on their official website at the following
-URL:https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf
 
 First and foremost, you\'ll need to install ggplot2 using
 `install.packages("ggplot2")` or through point-and-click
@@ -800,7 +767,7 @@ ggplot(msleep, aes(sleep_total)) + geom_histogram(binwidth = 1)
 
 **Output**: We get a binwidth error along with the following graph when we try to create a histogram
 of the `sleep_total` variable from the `msleep`
-dataset using the code mentioned in [*Step 3*]:
+dataset using the code mentioned in *Step 3*:
 
 
 <img src="./images/fb809495-2bcc-47f9-ac3f-fd71cfa7c359.png" alt="drawing" style="width:275px;"/>
@@ -887,8 +854,7 @@ ggplot(msleep, aes(vore)) + geom_histogram(stat = "count")
 ```
 
 
-**Output**: The following is the output we get after executing the code mentioned in [*Step
-1*]:
+**Output**: The following is the output we get after executing the code mentioned in *Step 1*:
 
 
 <img src="./images/90ffa834-c27b-4219-aca8-5be75bf08d9a.png" alt="drawing" style="width:275px;"/>
@@ -965,8 +931,7 @@ ggplot(msleep, aes(bodywt, sleep_total)) + geom_jitter(width = 50)
 ```
 
 
-**Output**: The following is the output we get when we execute the code mentioned in [*Step
-1*]:
+**Output**: The following is the output we get when we execute the code mentioned in *Step 1*:
 
 
 <img src="./images/b9aa1fe5-810b-4a9f-8b5b-1faabe3aaa38.png" alt="drawing" style="width:275px;"/>
@@ -1321,8 +1286,7 @@ ggplot(msleep, aes(vore, fill = conservation)) + geom_bar(position = "fill")
 ```
 
 
-**Output**: The following is the output we get when we execute the code mentioned in [*Step
-1*]:
+**Output**: The following is the output we get when we execute the code mentioned in *Step 1*:
 
 
 <img src="./images/4289f7df-85dc-48b3-8729-e32b49928fcb.png" alt="drawing" style="width:275px;"/>
@@ -1425,7 +1389,7 @@ ggplot(msleep, aes(conservation)) + geom_bar() + facet_grid(vore~)
 ```
 
 
-**Output**: The following is the output we get when we execute the code in [*Step 1*]:
+**Output**: The following is the output we get when we execute the code in *Step 1*:
 
 
 <img src="./images/6fe641c0-3b6b-4577-875e-b4bda58d747a.png" alt="drawing" style="width:275px;"/>
@@ -1593,7 +1557,7 @@ executing the code mentioned in *Step 2*:
 
 
 The following is the output we get after executing the code mentioned in
-[*Step 3*]:
+*Step 3*:
 
 
 <img src="./images/a035eb9e-d09e-4ec4-b83d-32c6448ebb67.png" alt="drawing" style="width:275px;"/>
