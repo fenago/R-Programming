@@ -747,7 +747,7 @@ data(diamonds)
 
 
 ``` 
-diamonds %&gt;% group_by(cut, color, clarity) %&gt;% summarise(n())
+diamonds %>% group_by(cut, color, clarity) %>% summarise(n())
 ```
 
 
@@ -758,7 +758,7 @@ diamonds %&gt;% group_by(cut, color, clarity) %&gt;% summarise(n())
 
 
 ``` 
-diamonds %&gt;% group_by(cut) %&gt;% summarise(mean = mean(price), median = median(price))
+diamonds %>% group_by(cut) %>% summarise(mean = mean(price), median = median(price))
 ```
 
 
@@ -770,7 +770,7 @@ diamonds %&gt;% group_by(cut) %&gt;% summarise(mean = mean(price), median = medi
 
 
 ``` 
-diamonds %&gt;% filter(color != "D" & color != "J") %&gt;% group_by(cut) %&gt;% summarise(mean = mean(price))
+diamonds %>% filter(color != "D" & color != "J") %>% group_by(cut) %>% summarise(mean = mean(price))
 ```
 
 
@@ -864,7 +864,8 @@ summarize data. One example of the use of the `apply()`
 function would be the following:
 
 ``` 
-numbers <- rbind(c(1:5), c(2:6)) apply(numbers, 2, mean)
+numbers <- rbind(c(1:5), c(2:6)) 
+apply(numbers, 2, mean)
 ```
 
 
@@ -1110,9 +1111,9 @@ all_equal(iris, iris_back)
 
 
 ``` 
-iris_setosa_2 <- iris %&gt;% filter(Species == "setosa") 
-iris_versicolor_2 <- iris %&gt;% filter(Species == "versicolor") 
-iris_virginica_2 <- iris %&gt;% filter(Species == "virginica")
+iris_setosa_2 <- iris %>% filter(Species == "setosa") 
+iris_versicolor_2 <- iris %>% filter(Species == "versicolor") 
+iris_virginica_2 <- iris %>% filter(Species == "virginica")
 ```
 
 
@@ -1170,7 +1171,8 @@ combining data. In order to do so, the following steps need to be executed:
 
 
 ``` 
-install.packages("ggplot2") library(ggplot2) 
+install.packages("ggplot2") 
+library(ggplot2) 
 ```
 
 
@@ -1180,7 +1182,8 @@ install.packages("ggplot2") library(ggplot2)
 
 
 ``` 
- data("midwest") str(midwest) 
+ data("midwest") 
+ str(midwest) 
 ```
 
 
@@ -1317,7 +1320,8 @@ steps need to be executed:
 
 
 ``` 
-install.packages("stringr") library(stringr)
+install.packages("stringr") 
+library(stringr)
 ```
 
 
@@ -1543,7 +1547,8 @@ to be executed:
 
 
 ``` 
-install.packages("readr") library(readr)
+install.packages("readr") 
+library(readr)
 ```
 
 
@@ -1569,7 +1574,8 @@ fenago/R-Programming/master/lesson3/students2.csv")
 
 
 ``` 
-str(students) str(students2)
+str(students) 
+str(students2)
 ```
 
 
@@ -1582,7 +1588,8 @@ str(students) str(students2)
 
 
 ``` 
-students_combined <- merge(students, students2, by = "ID") dim(students_combined)
+students_combined <- merge(students, students2, by = "ID") 
+dim(students_combined)
 ```
 
 
@@ -1612,7 +1619,8 @@ students_combined2 <- merge(students, students2, by = "ID", all.y = TRUE) dim(st
 
 
 ``` 
-install.packages("dplyr") library(dplyr)
+install.packages("dplyr") 
+library(dplyr)
 ```
 
 

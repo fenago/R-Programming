@@ -1346,7 +1346,7 @@ ggplot(msleep, aes(conservation)) + geom_bar() + facet_wrap(~vore)
 
 
 ``` 
-ggplot(msleep, aes(conservation)) + geom_bar() + facet_grid(vore~)
+ggplot(msleep, aes(conservation)) + geom_bar() + facet_grid(vore~.)
 ```
 
 
